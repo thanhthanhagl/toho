@@ -1,5 +1,9 @@
 /* text */
-
+.c-desc{
+    &.--center{
+        text-align: center;
+    }
+}
 .c-text1{
     font-size: rem(16);
     font-weight: 500;

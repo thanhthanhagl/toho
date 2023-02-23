@@ -51,6 +51,7 @@
 			position: relative;
 			text-align: center;
 			margin-left: 1.1em;
+			transition: all 0.3s;
 			&::before{
 				content: "";
 				display: block;
@@ -75,6 +76,14 @@
 				transform: translate(-50%,-50%);
 				position: absolute;
 			}
+		
+			&:hover{
+				opacity: 1;
+				cursor: pointer;
+				&::before{
+					display: none;
+				}
+			}
 		}
 		&__btntext{
 			color: #fff;
@@ -96,13 +105,6 @@
 				left: -24%;
 				transform: translate(-50%,-50%);
 				position: absolute;
-			}
-			&:hover{
-				opacity: 1;
-				cursor: pointer;
-				&::before{
-					display: none;
-				}
 			}
 		}
 	}

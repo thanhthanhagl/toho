@@ -60,17 +60,6 @@ $(window).on('resize orientationchange', function() {
 		}
 	});
 //
-// pagetop
-//------------------------------------
-	var $pagetop = $('.js-pagetop');
-	$pagetop.click(function() {
-		console.log('a')
-		$('body,html').stop().animate({scrollTop: 0}, 500);
-		return false;
-	});
-
-
-//
 // スムーススクロール関係js ここから
 //------------------------------------
 	// ページ内リンク要

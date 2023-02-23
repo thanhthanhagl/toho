@@ -1,4 +1,7 @@
 /* display */
+.is-none {
+	display: none;
+}
 
 .u-inlineBlock {
 	display: inline-block;
@@ -11,7 +14,7 @@
 }
 
 @include media-breakpoint-sp {
-    .u-onlyPc {
+	.u-onlyPc {
 		display: none !important;
 	}
 }
