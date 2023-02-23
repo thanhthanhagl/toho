@@ -1,0 +1,22 @@
+.l-inner {
+	margin: 0 auto;
+	padding: 0 $pd-x-pc;
+	width: 100%; 
+	height: inherit;
+	max-width: $content-width;
+
+	&.--wide {
+		max-width:  $content-width--wide;
+	}
+
+	&.--narrow {
+		max-width:  $content-width--narrow;
+	}
+}
+// Phone  
+// --------------------------------------------------
+@include media-breakpoint-sp {
+	.l-inner {
+		padding: 0 $pd-x-sp;
+	}
+}

@@ -1,0 +1,25 @@
+/* link */ 
+
+.c-textlink {
+    font-size: rem(16);
+    display: inline-block;
+    position: relative;
+    color: #0c7cad;
+    text-decoration: underline;
+    &[target="_blank"]:after {
+        content: "";
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background: url(images/common/icon_blank.png) no-repeat center / contain;
+        margin-left: 10px;
+    }
+    &.--pdf:after {
+        content: "";
+        display: inline-block;
+        width: 27px;
+        height: 13px;
+        background: url(images/common/icon_pdf.png) no-repeat center / contain;
+        margin-left: 10px;
+    }
+}

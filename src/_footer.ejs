@@ -1,0 +1,28 @@
+				</article>
+				<!-- /article -->
+			</main>
+			<!-- /.l-primary -->
+			<div class="c-pagetop js-pagetop">
+				PAGE TOP
+			</div>
+			<!-- /.c-pagetop -->
+		</div>
+		<!-- /.l-content -->
+		<footer class="l-footer">
+			<div class="l-footer__inner">
+				<div class="l-footer__contents">
+					<p class="l-footer__copyright">©ANDCO</p>
+				</div>
+			</div>
+		</footer>
+		<!-- /.l-footer -->
+	</div>
+	<!-- /.l-all -->
+	<script src="<%= getRelativePath('/js/jquery-3.6.0.min.js'); %>"></script>
+	<script src="<%= getRelativePath('/js/script.js'); %>"></script>
+	<% if(getPageId() == 'index') { %>
+		<script src="<%= getRelativePath('/js/slick.min.js'); %>"></script>
+		<script src="<%= getRelativePath('/js/index.js'); %>"></script>
+	<% } %>
+</body>
+</html>

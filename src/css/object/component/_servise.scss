@@ -1,0 +1,41 @@
+.c-servise{
+    &__row{
+        display: flex;
+        &.--first{
+            .c-servise__textbox{
+                &::before{                    
+                    background-image: url('/images/index/img_no1.svg');
+                }
+            }
+        }
+        &.--second{
+            max-width: 1090px;
+            margin: 0 auto;
+        }
+    }
+    &__col{
+        display: flex;
+        flex-direction: column;
+    }
+    &__textbox{
+        background-color: #fff;
+        &::before{
+            content: "";
+            display: block;
+            width: 144px;
+            height: 80px;
+            background-size: cover;
+        }
+        &.--left{
+            &::before{
+                background-image: url('/images/index/img_no2.svg');
+            }
+        }
+        &.--right{
+            &::before{
+                background-image: url('/images/index/img_no3.svg');
+            }
+        }
+    }
+    
+}

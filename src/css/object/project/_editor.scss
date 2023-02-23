@@ -1,0 +1,131 @@
+/* editor */
+
+.p-editor {
+    &__content {
+        margin: 3em auto;
+        overflow: hidden;
+        @include clearfix;
+        h1{
+            font-size: rem(28);
+        }
+        h2{
+            font-size: rem(24);
+        }
+        h3{
+            font-size: rem(24);
+        }
+        h4{
+            font-size: rem(22);
+        }
+        h5{
+            font-size: rem(20);
+        }
+        h6{
+            font-size: rem(18);
+        }
+        p {
+            min-height: 1em * $line-height-base;
+        }
+        a{
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        img {
+            height: auto !important;
+            &.aligncenter{
+                display: block;
+                margin: 0 auto;
+            }
+            &.alignright{
+                float: right;
+            }
+            &.alignleft{
+                float: left;
+            }
+        }
+        em {
+            font-style: italic;
+        }
+        blockquote{
+            position: relative;
+            background-color: #eeeeee;
+            padding: 1.5em 1.5em 1em;
+            margin: 1em auto;
+            &::before{
+                display: inline-block;
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                content: "“";
+                font-size: rem(32);
+                color: #cfcfcf;
+                line-height: 1;
+            }
+        }
+        table {
+            margin: 2em auto;
+            background-color: #fff;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            max-width: 100%;
+            th,
+            td {
+                border-left: 1px solid #000;
+                border-top: 1px solid #000;
+                padding: 0.5em;
+            }
+            th {
+                text-align: center;
+                font-weight: bold;
+                background-color: #000;
+            }
+            &.aligncenter{
+                margin: 0 auto;
+            }
+            &.alignright{
+                float: right;
+            }
+            &.alignleft{
+                float: left;
+            }
+        }
+        ul,
+        ol {
+            margin-left: 1.5em;
+            > li {
+                > ul,
+                > ol {
+                    margin-left: 1.25em;
+                }
+            }
+        }
+        ul{
+            list-style: circle;
+        }
+        ol{
+            list-style: decimal;
+        }
+        dl {
+            > dt {
+                font-weight: bold;
+            }
+            > dd {
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .p-editor {
+        &__content {
+            table {
+                width:  100% !important;
+            }
+        }
+	}
+}

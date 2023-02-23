@@ -1,0 +1,104 @@
+.l-table {
+    width: 100%;
+    margin-bottom: 85px;
+    @for $var from 1 to 12 {
+        .--col#{$var} {
+            width: calc( 100% / (12 / #{$var}));
+        }
+    }
+    &__table {
+        font-size: rem(16);
+        color: #141c28;
+        width: 100%;
+    }
+    &__th, &__td {
+        border: 1px solid rgba(96, 96, 96, 0.25);
+        vertical-align: middle;
+    }
+    &__th {
+        padding: 0.75em;
+        vertical-align: top;
+        &.--center {
+            text-align: center;
+        }
+        &.--top {
+            vertical-align: top;
+        }
+    }
+    &__td {
+        padding: 0.75em;
+        vertical-align: top;
+        font-weight: 700;
+        &.--center {
+            text-align: center;
+        }
+        &.--center {
+            text-align: center;
+        }
+        &.--demibold {
+            font-weight: 600 !important;
+        }
+        &.--regular {
+            font-weight: 400;
+        }
+        &.--lh2 {
+            line-height: 2;
+        }
+        &__listCol2 {
+            display: flex;
+            flex-wrap: wrap;
+            .c-listDot {
+                width: 42.4%;
+            }
+        }
+    }
+    &.--color1 {
+        .l-table {
+            &__th {
+                background-color: #f9e4ec;
+            }
+        }
+    }
+    &.--color2{
+        .l-table {
+            &__th{
+                background-color: $brand-color;
+                color: #ffffff;
+            }
+            &__td {
+                background: #edf6f9;
+            }
+            &__th, &__td{
+                border: none;
+                border-top: 1px solid rgba(96, 96, 96, 0.25);
+                border-bottom: 1px solid rgba(96, 96, 96, 0.25);
+            }
+        }
+    }
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .l-table {
+        &.--spmax {
+            .l-table__col , .l-table__th , .l-table__td {
+                display: block;
+                width: 100%;
+            }
+        }
+        &.--scroll{
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 60px;
+            font-size: rem(15);
+            &::-webkit-scrollbar {
+                height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: #ededed;
+                border-radius: 5px;
+            }
+        }
+    }
+}

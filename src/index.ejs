@@ -1,0 +1,53 @@
+<%- include('_config', { extend: { relativePath: '.' , page: { id: 'index' , title: 'Toho Yoko' ,
+	description: 'TOP Toho Yoko' , } }}); %><%- include('_header'); %>
+		<section class="p-index__servise">
+			<div class="l-inner">
+				<div class="c-heading1">
+					<div class="c-heading1__subtitle">
+						<img src="<%= getRelativePath('/images/index/txt_service.png')%>" alt="Service">
+					</div>
+					<h2 class="c-heading1__title">事業内容</h2>
+				</div>
+			</div>
+			<div class="c-servise">
+				<div class="c-servise__list">
+					<div class="c-servise__row --first">
+						<div class="c-servise__textbox">
+							<h3 class="c-servise__title">重量物の運搬・設置</h3>
+							<p class="c-servise__desc">重量物の運搬・設置は、東邦重量の最も得意とする業務です。
+								豊富な経験を持ち、重量物の構造や仕組みを熟知したエキスパートが、安全でスムーズな運搬・設置を行います。</p>
+						</div>
+						<div class="c-servise__wrapimg"><img
+								src="<%= getRelativePath('/images/index/img_service01.jpg')%>" alt="重量物の運搬・設置"></div>
+					</div>
+					<div class="c-servise__row --second">
+						<div class="c-servise__col">
+							<div class="c-servise__textbox --left">
+								<h3 class="c-servise__title">省力化機器・治工具の製作</h3>
+								<p class="c-servise__desc">ロボットシステムなどの設計・製作・メンテナンスから、それに伴う治具の設計・製作を行ないます。</p>
+							</div>
+							<div class="c-servise__wrapimg"><img
+									src="<%= getRelativePath('/images/index/img_service02.jpg')%>" alt="省力化機器・治工具の製作">
+							</div>
+						</div>
+						<div class="c-servise__col">
+							<div class="c-servise__textbox --right">
+								<h3 class="c-servise__title">溶接部品販売店業</h3>
+								<p class="c-servise__desc">溶接部品の販売を行なっています。自社で在庫管理を行うため、消耗部品の納入も迅速に対応することが可能です。</p>
+							</div>
+							<div class="c-servise__wrapimg"><img
+									src="<%= getRelativePath('/images/index/img_service03.jpg')%>" alt="溶接部品販売店業"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c-button --center"><a href="<%= getRelativePath('/'); %>" class="c-button__link">事業内容を見る</a>
+			</div>
+		</section>
+		<section class="p-index__servise"></section>
+		<section class="p-index__vehicle"></section>
+		<section class="p-index__works"></section>
+		<section class="p-index__recruit"></section>
+		<section class="p-index__info"></section>
+		<section class="p-index__contact"></section>
+		<%- include('_footer'); %>

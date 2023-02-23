@@ -1,0 +1,117 @@
+<%
+	// 設定
+	config = _.merge({
+		relativePath: '',
+		site: {
+			title: 'Toho Yoko',
+			url: 'https://template.jp'
+		},
+		categories: {
+			news: {
+				url: '/news/',
+				title: 'お知らせ',
+			},
+			form: {
+				url: '/form/',
+				title: 'お問い合わせ',
+			},
+		},
+		page: {
+			category: '',
+			id: '',
+			title: '',
+			titlehtml: '',
+			description: '',
+			type: '',
+			breadline: []
+		}
+	}, extend);
+	// サイトタイトル
+	getSiteTitle = function() {
+		return config.site.title;
+	};
+	// サイトURL
+	getSiteUrl = function() {
+		return config.site.url;
+	};
+	// ヘッダページタイトル
+	getHeadPageTitle = function() {
+		var result = [],
+			categories = config.categories;
+		result.push(config.site.title);
+		if (config.page.category) {
+			var paths = config.page.category.split('/');
+			paths.forEach(function(id) {
+				if (categories) {
+					if (id in categories) {
+						result.push(categories[id].title);
+						categories = categories[id].children;
+					}
+				}
+			});
+		}
+		if (config.page.title && config.page.id != 'index' && config.page.id != 'confirm' && config.page.id != 'complate') {
+			result.push(config.page.title);
+		}
+		return result.reverse().join(' | ');
+	};
+	getEachPageTitle = function() {
+		if (config.page.titlehtml == "") {
+			return config.page.title;
+		} else {
+			return config.page.titlehtml;
+		}
+		
+	}
+	// ディスクリプション
+	getDescription = function() {
+		return config.page.description;
+	};
+	// ページID
+	getPageId = function() {
+		var result = '',
+			categories = config.categories;
+		if (config.page.category) {
+			var paths = config.page.category.split('/');
+			paths.forEach(function(id) {
+				if (categories) {
+					if (id in categories) {
+						result += id + '_';
+						categories = categories[id].children;
+					}
+				}
+			});
+		}
+		return result + config.page.id;
+	};
+	// ページタイトル
+	getPageTitle = function() {
+		return (getPageId() != 'index' ? config.page.title : config.site.title);
+	};
+	// ページURL
+	getPageUrl = function() {
+		return config.site.url + (getPageId() != 'index' ? (config.page.category ? '/' + config.page.category : '') + '/' + (config.page.id != 'index' ? config.page.id + '.html' : '') : '/');
+	};
+	// Bodyクラス
+	getBodyClass = function() {
+		var category = config.page.category,
+			id = config.page.id
+			if(category) {
+				if(id != 'index') {
+					return 'p-'+ id; 
+				} else {
+					return 'p-'+ category; 
+				}
+			} else {
+				return 'p-'+ id; 
+			}
+	};
+	// 相対パス
+	getRelativePath = function(path) {
+		return config.relativePath + path;
+	};
+	// wp画像パス
+	getCmsPath = function(path) {
+		return config.relativePath + "/cms/wp-content/uploads" + path;
+	};
+%>

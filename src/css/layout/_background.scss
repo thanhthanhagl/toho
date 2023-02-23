@@ -1,0 +1,23 @@
+.l-background {
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+        position:absolute;
+        z-index: -1;
+        top:100px;
+        left: 0;
+        right: 0;
+        bottom:-100px;
+        width: 100%;
+        background-color: #edf6f9;
+    }
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .l-background {
+        
+    }
+}

@@ -1,0 +1,11 @@
+/* mainvisual */ 
+
+.c-mainvisual {
+    &__item {
+        width: 100%;
+        height: calc(100vh - 86px);
+        background-size: cover;
+        background-position: center;
+    }
+}
+

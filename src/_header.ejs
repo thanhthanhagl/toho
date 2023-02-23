@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		<%= getHeadPageTitle(); %>
+	</title>
+	<meta name="description" content="<%= getDescription(); %>">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<%= getSiteUrl(); %>">
+	<meta property="og:title" content="<%= getSiteTitle(); %>">
+	<meta property="og:description" content="<%= getDescription(); %>">
+	<meta property="og:image" content="<%= getSiteUrl(); %>/ogp.jpg">
+	<meta property="og:site_name" content="<%= getSiteTitle(); %>">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.ico'); %>">
+	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
+</head>
+
+<body class="<%= getBodyClass(); %>">
+	<div class="l-all">
+		<header class="l-header">
+			<div class="l-header__content">
+				<div class="l-header__top">
+					<div class="l-header__logo">
+						<h1><a href="<%= getRelativePath('/'); %>"><img
+									src="<%= getRelativePath('/images/common/logo.png'); %>" alt="Toho Yoko"></a>
+						</h1>
+					</div>
+					<div class="l-header__right">
+						<div class="l-header__right__wrapimg">
+							<img src="<%= getRelativePath('/images/common/tel.png'); %>" alt="0761243888">
+						</div>
+						<div class="l-header__right__text">10:00〜17:00<br>※土日祝休み</div>
+						<a href="#" class="l-header__right__btn"><span class="l-header__right__btntext">お問い合わせ</span></a>
+					</div>
+				</div>
+				<nav class="l-header__nav">
+					<div class="l-header__nav__inner">
+						<div class="l-header__contents">
+							<ul class="l-header__list">
+								<li class="l-header__item">
+									<a href="<%= getRelativePath('/'); %>">
+										<span>トップページ</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a href="<%= getRelativePath('/'); %>">
+										<span>東邦重量の特徴</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a href="<%= getRelativePath('/'); %>">
+										<span>事業内容</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a href="<%= getRelativePath('/'); %>">
+										<span>事例紹介</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a href="<%= getRelativePath('/'); %>">
+										<span>会社案内</span>
+									</a>
+								</li>
+								<li class="l-header__item">
+									<a href="<%= getRelativePath('/'); %>">
+										<span>採用情報</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<div class="l-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+		<!-- /.l-header -->
+		<div class="l-content">
+			<main id="l-primary">
+				<% if (getPageId()=='index' ) { %>
+					<div class="c-mainvisual">
+						<div class="c-mainvisual__list">							
+							<div class="c-mainvisual__item"
+							style="background-image: url('<%= getRelativePath('/images/index/bg_mv.jpg'); %>');">
+							</div>
+						</div>
+					</div>
+					<% } else { %>
+						<div class="c-pagetitle">
+							<div class="c-pagetitle__image"></div>
+							<h2 class="c-pagetitle__heading">
+								<strong><%- getEachPageTitle(); %></strong>
+							</h2>
+						</div>
+						<% } %>
+							<%- include('_breadline'); %>
+								<article>
