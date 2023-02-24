@@ -1,0 +1,15 @@
+/* section recruit*/
+.c-recruit{
+    text-align: center;
+    color: #fff;
+    &__title{
+        margin-bottom: 30px;
+    }
+    &__desc{
+        font-size: rem(16);
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        line-height: 1.875;
+        margin-bottom: 42px;
+    }
+}

@@ -15,20 +15,20 @@ jQuery(function($) {
 //
 // viewport resize
 //------------------------------------
-$(window).on('resize orientationchange', function() {
-	if ($menuButton.css('display') == 'none') {
-		if (!desktopMode) {
-			desktopMode = true;
-			$('head').find('meta[name="viewport"]').attr('content', 'width=1240');
-		}
-	} else {
-		if (desktopMode) {
-			desktopMode = false;
-			$('head').find('meta[name="viewport"]').attr('content', 'width=device-width,initial-scale=1,user-scalable=yes');
-		}
-	}
-	$(this).trigger('scroll');
-}).trigger('resize');
+// $(window).on('resize orientationchange', function() {
+// 	if ($menuButton.css('display') == 'none') {
+// 		if (!desktopMode) {
+// 			desktopMode = true;
+// 			$('head').find('meta[name="viewport"]').attr('content', 'width=1240');
+// 		}
+// 	} else {
+// 		if (desktopMode) {
+// 			desktopMode = false;
+// 			$('head').find('meta[name="viewport"]').attr('content', 'width=device-width,initial-scale=1,user-scalable=yes');
+// 		}
+// 	}
+// 	$(this).trigger('scroll');
+// }).trigger('resize');
 
 
 //
@@ -58,7 +58,17 @@ $(window).on('resize orientationchange', function() {
 				$(this).children('.l-header__subitem').slideDown(500)
 			}
 		}
-	});
+	});	
+//
+// pagetop
+//------------------------------------
+var $pagetop = $('.js-pagetop');
+$pagetop.click(function() {
+	console.log('a')
+	$('body,html').stop().animate({scrollTop: 0}, 500);
+	return false;
+});
+
 //
 // スムーススクロール関係js ここから
 //------------------------------------

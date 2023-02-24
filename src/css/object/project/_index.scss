@@ -4,10 +4,42 @@
         margin-top: -5rem;
     }
     &__servise{
-        padding-top: 110px;
-        background: linear-gradient(to right, #f3f3f3 78.5%, #fff 22.5%);
-        .c-heading1{
-            margin-bottom: rem(70);
+        padding-top: rem(80);
+        padding-bottom: rem(110);
+        background: linear-gradient(to right, #f3f3f3 77.5%, #fff 22.5%);
+        .c-heading{
+            &.--multi{
+                margin-bottom: rem(90);
+            }
         }
+    }
+    &__vehicle{
+        padding-top: rem(70);
+        padding-bottom: rem(110);
+    }
+    &__works{
+        padding-top: 5.8%;
+        padding-bottom: 8%;
+        background-color: #f3f3f3;
+        .c-desc{
+            margin-top: 45px;
+        }
+        .l-imgTxt{
+            margin-bottom: 60px;
+        }
+    }
+    &__recruit{
+        background-image: url('/images/index/bg_recruit.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 7.1% 0;
+    }
+    &__info{
+        padding: 8% 0;
+    }
+    &__contact{
+        background-color: #f0f0f0;
+        padding: 40px 0;
     }
 }

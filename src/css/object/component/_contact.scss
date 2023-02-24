@@ -1,0 +1,24 @@
+/* section contact */
+.c-contact{
+    &__main{
+        display: flex;
+    }
+    &__col{
+        &.--left{
+            width: 25%
+        };
+        &.--right{
+            width: 75%;
+        }
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        &__left{
+            width: 50.8%;
+        }
+        &__right{
+            width: 42.6%;
+        }
+    }
+}

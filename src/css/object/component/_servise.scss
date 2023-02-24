@@ -5,76 +5,116 @@
         justify-content: flex-end;
 
         &.--first {
-            margin-bottom: rem(60);
-            .c-servise__textbox {
-                padding: 6.5% 4% 4.8% 19%;
-                width: 55.3%;
-                top: 10%;
-                left: 0;
-                position: absolute;
-                z-index: 2;
+            margin-bottom: rem(61);
 
-                &::before {
-                    background-image: url('/images/index/img_no1.svg');
-                    top: 14%;
-                    left: 22.6%;
+            .c-servise {
+                &__textbox {
+                    padding: 5.3% 3.5% 3.7% 16.8%;
+                    width: 48.9%;
+                    position: absolute;
+                    top: 47.8%;
+                    left: 0;
+                    transform: translateY(-50%);
+
+                    &__inner {
+                        &::before {
+                            background-image: url('/images/index/img_no1.svg');
+                            top: -17%;
+                            left: -20%;
+                        }
+                    }
                 }
             }
 
             .c-servise__wrapimg {
-                width: 59.3%;
+                width: 56.8%;
                 z-index: 1;
+                &.--large {
+                    background-image: url('/images/index/img_service01.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    padding-bottom: 31.8%;
+                }
             }
         }
 
         &.--second {
             max-width: 1090px;
-            margin: 0 auto rem(100);
+            margin: 0 auto 91px;
             display: flex;
             justify-content: space-between;
-            .c-servise{
-                &__textbox{
-                    position: relative;
-                    padding: rem(40) rem(50);
-                    &::before{
-                        position: absolute;
+
+            .c-servise {
+                &__textbox {
+                    padding: 7.1% 9.5% 5.8%;
+                    width: 81%;
+                    &__inner{
+                        &::before{
+                            top:-35%;
+                            left: -24.5%;
+                        }
                     }
                 }
-                &__title{
+
+                &__title {
                     font-size: rem(24);
                     letter-spacing: 0.05em;
                     line-height: 1.4;
                 }
-            }
-        }
-    }
 
-    &__col {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 48%;
-        &.--left{           
-            flex-direction: column-reverse;
-            align-items: flex-end;
-            .c-servise__textbox{
-                width: 80%;
-                align-self: flex-start;
-                &::before{
-                    background-image: url('/images/index/img_no2.svg');
-                    top:-5%;
-                    left:-5%;
+                &__desc {
+                    margin-top: 10px;
                 }
-            }
-        }
-        &.--right{
-            .c-servise__textbox{
-                width: 80%;
-                align-self: flex-end;
-                &::before{
-                    background-image: url('/images/index/img_no3.svg');
-                    top:-10%;
-                    left:-7%;
+
+                &__col {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    width: calc((100% - 50px) / 2);
+
+                    &.--left {
+                        flex-direction: column-reverse;
+                        align-items: flex-end;
+
+                        .c-servise {
+                            &__textbox {
+                                align-self: flex-start;
+                                top: -8%;
+                                left: 5.6%;
+
+                                &__inner {
+                                    &::before {
+                                        background-image: url('/images/index/img_no2.svg');
+                                    }
+                                }
+                            }
+
+                            &__wrapimg {
+                                background-image: url('/images/index/img_service02.jpg');
+                            }
+                        }
+                    }
+
+                    &.--right {
+                        .c-servise {
+                            &__textbox {
+                                align-self: flex-end;
+                                top: 12.2%;
+                                left: -5.5%;
+                                &__inner {
+                                    &::before {
+                                        background-image: url('/images/index/img_no3.svg');
+                                    }
+                                }
+                            }
+
+                            &__wrapimg {
+                                background-image: url('/images/index/img_service03.jpg');
+                                position: relative;
+                                top: 20px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -82,27 +122,28 @@
 
     &__textbox {
         background-color: #fff;
-        font-feature-settings: "palt" 1;
+        position: relative;
+        z-index: 2;
 
-        &::before {
-            content: "";
-            display: block;
-            width: 144px;
-            height: 80px;
-            background-size: cover;
-        }
+        &__inner {
+            position: relative;
 
-        &.--left {
             &::before {
-                background-image: url('/images/index/img_no2.svg');
+                content: "";
+                display: block;
+                width: 144px;
+                height: 80px;
+                background-size: cover;
+                position: absolute;
             }
         }
+    }
 
-        &.--right {
-            &::before {
-                background-image: url('/images/index/img_no3.svg');
-            }
-        }
+    &__wrapimg {
+        width: 84.6%;
+        padding-bottom: 56%;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     &__title {
@@ -114,7 +155,7 @@
     }
 
     &__desc {
-        line-height: 1.9;
+        line-height: 1.85;
         font-weight: 300;
         letter-spacing: 0.8px;
         color: #333;

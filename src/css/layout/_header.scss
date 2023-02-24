@@ -18,19 +18,32 @@
 		display: flex;
 		background-color: #fff;
 		justify-content: space-between;
-		padding: 16px 12px 16px 20px;
+		padding: 16px 20px;
 		width: 100%;
 		max-width: $content-width;
 		margin: 0 auto;
+	}
+	&__logo {
+		width: 28%;
+		padding-top: 10px;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			transition: 0.3s all;
+			&:hover{
+				opacity: 0.7;
+			}
+		}
 	}
 	&__right{
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		width: 61.5%;
+		width: 61.8%;
 		&__wrapimg{
 			padding-top: 5px;
-			width: 63%;
+			width: 62%;
 		}
 		&__text{
 			font-size: rem(12);
@@ -108,20 +121,7 @@
 			}
 		}
 	}
-	&__logo {
-		width: 28%;
-		padding-top: 10px;
-		margin-left: 0.5em;
-		a {
-			display: block;
-			width: 100%;
-			height: 100%;
-			transition: 0.3s all;
-			&:hover{
-				opacity: 0.7;
-			}
-		}
-	}
+	
 	
 	&__nav {
 		width: 100%;
@@ -132,12 +132,11 @@
 	&__nav__inner {
 		height: 100%;
 		max-width: $content-width;
-		padding: 20px 10px;
+		padding: 20px;
 		margin: 0 auto;
 	}
 	&__contents {
 		height: 100%;
-		padding-left: 18px;
 	}
 	&__list {
 		height: 100%;

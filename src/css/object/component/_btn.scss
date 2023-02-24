@@ -1,27 +1,26 @@
 /* btn */
 
 .c-button {
+    text-align: center;
+    font-feature-settings: "palt" 1;
+    letter-spacing: 0.05em;
+    font-size: rem(18);
+    line-height: 1.7;
+    font-weight: 600;
+    transition: 0.3s all linear;
     &.--center {
         text-align: center;
     }
 
     &__more {
+        position: relative;
         display: block;
         max-width: 450px;
         width: 100%;
-        padding: 13px 20px 12px;
+        padding: 24px 20px 23px;
         background-color: #005DAC;
-        position: relative;
-        text-align: center;
-        margin-left: 1.1em;
-        transition: all 0.3s;
-        color: #fff;
-        font-feature-settings: "palt" 1;
-        letter-spacing: 0.05em;
-        font-size: rem(18);
-        line-height: 1.7;
-        font-weight: 600;
         margin: 0 auto;
+        color: #fff;
 
         &::before {
             content: "";
@@ -37,13 +36,13 @@
 
         &::after {
             content: "";
-            width: 7px;
-            height: 10px;
+            width: 8px;
+            height: 12px;
             display: inline-block;
             background: url('/images/common/arrow_w.svg') no-repeat center / contain;
             position: relative;
             top: 50%;
-            right: 8%;
+            right: 10%;
             transform: translate(-50%, -50%);
             position: absolute;
         }
@@ -55,7 +54,40 @@
             &::before {
                 display: none;
             }
+            &::after{
+                right: calc(10% - 10px);
+            }
         }
+    }
+    &__recruit{
+        display: block;
+        max-width: 450px;
+        width: 100%;
+        padding: 24px 20px 23px;
+        background-color: rgba(0,0,0,0.2);
+        position: relative;
+        margin: 0 auto;
+        color: #fff;
+        font-feature-settings: "palt" 0;
+
+        &::after {
+            content: "";
+            width: 8px;
+            height: 12px;
+            display: inline-block;
+            background: url('/images/common/arrow_w.svg') no-repeat center / contain;
+            position: relative;
+            top: 50%;
+            right: 9%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
     }
 
     &__link {

@@ -1,3 +1,7 @@
+@font-face {
+	font-family: Hiragino;
+	src: url('/fonts/HiraKakuProN-W3.otf');
+};
 *,
 *::before,
 *::after {
@@ -6,7 +10,7 @@
 
 body {
 	color: $font-color;
-	font-family: $font-family-gothic;
+	font-family: $font-family-hira;
 	font-weight: 500;
 	line-height: 1.8;
 	word-break: normal;

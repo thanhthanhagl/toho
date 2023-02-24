@@ -1,0 +1,55 @@
+/* section vehicle */
+.c-vehicle {
+    &__main {
+        margin-top: 45px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+        &.--img {
+            width: 56.4%;
+        }
+
+        &.--textbox {
+            width: 38.5%;
+        }
+    }
+
+    &__item {
+        font-weight: 300;
+        font-size: rem(18);
+        letter-spacing: 0.05em;
+        line-height: 2.4;
+        color: $text-color;
+        display: flex;
+        justify-content: space-between;
+        text-indent: 6px;
+        margin-bottom: 5px;
+        &__text{
+            &:first-child{
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: $brand-color;
+                    position: relative;
+                    left: -8px;
+                    top:-4px;
+                }
+            }
+        }        
+
+        &__note {
+            font-size: rem(14);
+            line-height: 3;
+            color: #888;
+            display: block;
+            margin-top: -18px;
+            margin-left: 5px;
+        }
+    }
+}
