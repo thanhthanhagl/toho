@@ -14,77 +14,11 @@
     }
     &.--contact{
         line-height: 1.6;
+        margin-bottom: 0.8em;
     }
 }
-.c-text1{
-    font-size: rem(16);
-    font-weight: 500;
-    &.--center {
-        text-align: center;
-    }
-    &.--bold {
-        font-weight: 700;
-    }
-    &.--fs1{
-        font-size: rem(18);
-    }
-    &.--fs2{
-        font-size: rem(14);
-    }
-}
-
-.c-boxText1 {
-    border-radius: 10px;
-    padding: 30px 45px;
-    margin-bottom: 1.5em;
-    background-color: #ededed;
-    &__ttl {
-        font-size: rem(18);
-        font-weight: 400;
-        color: $brand-color;
-        letter-spacing: 0.05em;
-        line-height: 1.75;
-        margin-bottom: 5px;
-    }
-    &__txt {
-        &.--regular {
-            font-weight: 400;
-        }
-        &.--color1 {
-            color: $brand-color;
-        }
-        &.--fs1 {
-            font-size: rem(18);
-        }
-    }
-    &.--bg1 {
-        background: #edf6f9;
-    }
-}
-
-// Phone
-// --------------------------------------------------
-@include media-breakpoint-sp {
-    .c-text1{
-        font-size: rem(15);
-        &.--fs1{
-            font-size: rem(16);
-        }
-        &.--fs2{
-            font-size: rem(13);
-        }
-    }
-    
-    .c-boxText1 {
-        padding: 20px 25px;
-        &__ttl {
-            font-size: rem(16);
-        }
-        &__txt {
-            font-size: rem(15);
-            &.--fs1 {
-                font-size: rem(16);
-            }
-        }
+@include media-breakpoint-tab-sp{
+    .c-desc{
+        font-size: rem(13);
     }
 }

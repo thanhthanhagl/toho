@@ -6,6 +6,16 @@
         height: calc(100vh - 86px);
         background-size: cover;
         background-position: center;
+        background-image: url('./images/index/bg_mv.jpg');
+    }
+}
+//Phone
+@include media-breakpoint-sp{
+    .c-mainvisual{
+        &__item{
+            height: calc(100vh - 55px);
+            background-image: url('./images/index/bg_mv_sp.jpg');
+        }
     }
 }
 

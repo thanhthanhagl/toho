@@ -3,6 +3,10 @@
 	display: none;
 }
 
+.is-call {
+	pointer-events: none;
+}
+
 .u-inlineBlock {
 	display: inline-block;
 }
@@ -13,8 +17,26 @@
 	}
 }
 
+@include media-breakpoint-tab-sp {
+	.is-call {
+		pointer-events: initial;
+		cursor: pointer;
+	}
+}
+
 @include media-breakpoint-sp {
 	.u-onlyPc {
 		display: none !important;
+	}
+	.u-group{
+		display: flex;
+		justify-content: center;
+		.l-footer{
+			&__text{
+				&:last-child{
+					text-indent: 8px;
+				}
+			}
+		}
 	}
 }

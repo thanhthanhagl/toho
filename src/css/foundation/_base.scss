@@ -1,6 +1,10 @@
 @font-face {
-	font-family: Hiragino;
-	src: url('/fonts/HiraKakuProN-W3.otf');
+	font-family: FolkPro;
+	src: url('./fonts/A-OTF-Folk-Pro-R.otf');
+};
+@font-face {
+	font-family: HiraKakuProN;
+	src: url('./fonts/HiraKakuProN-W3.otf');
 };
 *,
 *::before,
@@ -10,7 +14,7 @@
 
 body {
 	color: $font-color;
-	font-family: $font-family-hira;
+	font-family: $font-family-hirapron;
 	font-weight: 500;
 	line-height: 1.8;
 	word-break: normal;

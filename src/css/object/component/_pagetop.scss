@@ -1,13 +1,16 @@
 /* pagetop */ 
 
 .c-pagetop {
-    margin: 30px auto;
     background-color: $brand-color;
     position: relative;
-    padding: rem(30) 0;
+    padding: 23px 0 26px;
     text-align: center;
     cursor: pointer;
     transition: 0.3s right;
+    &__wrapimg{
+        width: 9%;
+        margin: 0 auto;
+    }
     &:hover{
         opacity: 1;
         &::before{

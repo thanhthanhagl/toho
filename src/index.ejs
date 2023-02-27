@@ -1,5 +1,5 @@
 <%- include('_config', { extend: { relativePath: '.' , page: { id: 'index' , title: 'Toho Yoko' ,
-	description: 'TOP Toho Yoko' , } }}); %><%- include('_header'); %>
+	description: 'TOP Toho Yoko', } }}); %><%- include('_header'); %>
 		<section class="p-index__servise">
 			<div class="l-inner">
 				<div class="c-heading --multi">
@@ -166,7 +166,7 @@
 			<div class="l-inner">
 				<div class="c-info">
 					<div class="c-info__main">
-						<div class="c-info__col --left">
+						<a href="<%= getRelativePath('/');%>" class="c-info__col --left">
 							<div class="c-info__inner">
 								<div class="c-headingred">
 									<div class="c-headingred__subtitle"><img
@@ -176,8 +176,8 @@
 								</div>
 								<div class="c-desc --info">東邦株式会社は1978年に創業、<br>重量物の運搬・据付を行って参りました。</div>
 							</div>
-						</div>
-						<div class="c-info__col --right">
+						</a>
+						<a href="<%= getRelativePath('/');%>" class="c-info__col --right">
 							<div class="c-info__inner">
 								<div class="c-headingred">
 									<div class="c-headingred__subtitle"><img
@@ -186,7 +186,7 @@
 								</div>
 								<div class="c-desc --info">重量物の運搬・据付などの業務において、<br>よくいただく質問をまとめました。</div>
 							</div>							
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -208,13 +208,15 @@
 								<div class="c-contact__info__left">
 									<div class="c-contact__wrapimg">
 										<a class="is-call" href="tel:0761243888"><img
-												src="<%= getRelativePath('/images/common/tel.png'); %>"
+												src="<%= getRelativePath('/images/index/tel.png'); %>"
 												alt="0761243888"></a>
 									</div>
 									<div class="c-contact__text">電話受付時間　10:00〜17:00 ※土日祝を除く</div>
 								</div>
-								<div class="c-contact__info__right c-button">
-									<a href="#" class="c-button__contact"><span>お問い合わせ</span></a>
+								<div class="c-contact__info__right">
+									<div class="c-button__form --contact">										
+										<a href="#" class="c-button__btntext --fs16"><span>お問い合わせ</span></a>
+									</div>
 								</div>
 							</div>
 						</div>

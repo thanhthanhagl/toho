@@ -8,16 +8,19 @@
     line-height: 1.7;
     font-weight: 600;
     transition: 0.3s all linear;
+    cursor: pointer;
+
     &.--center {
         text-align: center;
     }
 
     &__more {
+        cursor: pointer;
         position: relative;
         display: block;
         max-width: 450px;
         width: 100%;
-        padding: 24px 20px 23px;
+        padding: 24px 20px;
         background-color: #005DAC;
         margin: 0 auto;
         color: #fff;
@@ -39,7 +42,7 @@
             width: 8px;
             height: 12px;
             display: inline-block;
-            background: url('/images/common/arrow_w.svg') no-repeat center / contain;
+            background: url('./images/common/arrow_w.svg') no-repeat center / contain;
             position: relative;
             top: 50%;
             right: 10%;
@@ -49,22 +52,30 @@
 
         &:hover {
             opacity: 1;
-            cursor: pointer;
+
+            .c-button {
+                &__btntext {
+                    opacity: 1;
+                }
+            }
 
             &::before {
                 display: none;
             }
-            &::after{
+
+            &::after {
                 right: calc(10% - 10px);
             }
         }
     }
-    &__recruit{
+
+    &__recruit {
+        cursor: pointer;
         display: block;
         max-width: 450px;
         width: 100%;
         padding: 24px 20px 23px;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0, 0, 0, 0.2);
         position: relative;
         margin: 0 auto;
         color: #fff;
@@ -75,7 +86,7 @@
             width: 8px;
             height: 12px;
             display: inline-block;
-            background: url('/images/common/arrow_w.svg') no-repeat center / contain;
+            background: url('./images/common/arrow_w.svg') no-repeat center / contain;
             position: relative;
             top: 50%;
             right: 9%;
@@ -83,96 +94,142 @@
             position: absolute;
         }
 
+    }
+
+    &__form {
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        padding: 13px 20px 12px;
+        background-color: #E0243B;
+        position: relative;
+        text-align: center;
+        transition: all 0.3s;
+
+        &.--contact {
+            padding: 22px 20px 19px;
+
+            &::after {
+                width: 8px;
+                height: 12px;
+                right: 10%;
+            }
+
+            .c-button {
+                &__btntext {
+                    &::before {
+                        width: 22px;
+                        height: 16px;
+                        left: -20%;
+                    }
+                }
+            }
+        }
+
+        &.--footer {
+            width: 82.8%;
+            padding: 18px 20px 15px;
+
+            .c-button {
+                &__btntext {
+                    &::before {
+                        left: -22%;
+                    }
+                }
+            }
+
+            &::after {
+                right: 11%;
+            }
+        }
+
+        .--fs16 {
+            font-size: rem(16);
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            mix-blend-mode: normal;
+        }
+
+        &::after {
+            content: "";
+            width: 7px;
+            height: 10px;
+            display: inline-block;
+            background: url('./images/common/arrow_w.svg') no-repeat center / contain;
+            position: relative;
+            top: 50%;
+            right: 8%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+
         &:hover {
             opacity: 1;
-            cursor: pointer;
-        }
 
+            .c-button {
+                &__btntext {
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                display: none;
+            }
+        }
     }
 
-    &__link {
-        display: inline-block;
-        position: relative;
-        min-width: 300px;
-        margin: 10px;
-        background-color: #00927d;
-        padding: 10px;
-        border: 1px solid #00927d;
-        font-size: rem(16);
-        font-family: $font-family-gothic;
+    &__btntext {
         color: #fff;
-        text-align: center;
+        position: relative;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        font-size: rem(14);
+        left: 10px;
+        top: -1px;
+        cursor: pointer;
 
-        &:after {
+        &::before {
             content: "";
-            width: 13px;
-            height: 12px;
+            width: 20px;
+            height: 14px;
             display: inline-block;
-            position: absolute;
-            right: 1.5em;
+            background: url('./images/common/icon_mail.svg') no-repeat center / contain;
+            position: relative;
             top: 50%;
-            transform: translateY(-50%);
-            background: url(images/common/arrowRW.png) no-repeat center / contain;
+            left: -24%;
+            transform: translate(-50%, -50%);
+            position: absolute;
         }
 
-        &[target="_blank"]:after {
-            content: "";
-            display: inline-block;
-            width: 13px;
-            height: 13px;
-            background: url(images/common/icon_blankW.png) no-repeat center / contain;
-            margin-left: 10px;
-        }
-
-        &.--pdf:after {
-            content: "";
-            display: inline-block;
-            width: 27px;
-            height: 13px;
-            background: url(images/common/icon_pdf.png) no-repeat center / contain;
-            margin-left: 10px;
-        }
-
-        &.--color1 {
-            background-color: #fff;
-            color: #00927d;
-
-            &:after {
-                background: url(images/common/arrowRG.png) no-repeat center / contain;
-            }
-        }
-
-        &.--back {
-            &:after {
-                right: inherit;
-                left: 1.5em;
-                background: url(images/common/arrowLW.png) no-repeat center / contain;
-            }
+        &.--fs16 {
+            font-size: rem(16);
         }
     }
 }
+//Phone
 
-
-
-// Desktop + Tablet
-// --------------------------------------------------
-@include media-breakpoint-pc-tab {
-    .c-button {
-        &__link {
-            transition: 0.3s all;
-
-            &:hover {
-                opacity: 0.7;
-            }
-        }
-    }
-}
-
-
-// Phone
-// --------------------------------------------------
 @include media-breakpoint-sp {
     .c-button {
-        text-align: center;
+        font-size: rem(13);
+
+        &__more {
+            max-width: 215px;
+        }
+        &__form{
+            &.--footer{
+                margin: 0 auto;
+                max-width: 325px;
+            }
+        }
     }
 }

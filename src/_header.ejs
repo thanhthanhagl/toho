@@ -16,7 +16,7 @@
 	<meta property="og:site_name" content="<%= getSiteTitle(); %>">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 	<meta name="format-detection" content="telephone=no,email=no,address=no">
-	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.ico'); %>">
+	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.svg'); %>">
 	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
 	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
 	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
@@ -33,11 +33,20 @@
 						</h1>
 					</div>
 					<div class="l-header__right">
-						<div class="l-header__right__wrapimg">
-							<img src="<%= getRelativePath('/images/common/tel.png'); %>" alt="0761243888">
+						<div class="l-header__right__search u-onlySp">
+							<img src="<%= getRelativePath('/images/common/search.svg'); %>" alt="採用情報">
+							<p class="l-header__right__search__text">採用情報</p>
 						</div>
-						<div class="l-header__right__text">10:00〜17:00<br>※土日祝休み</div>
-						<a href="#" class="l-header__right__btn"><span class="l-header__right__btntext">お問い合わせ</span></a>
+						<div class="l-header__right__wrapimg">
+							<a href="tel:0761243888" class="is-call">
+								<picture>
+									<source media="(max-width:739px)" srcset="<%= getRelativePath('/images/common/tel_sp.png'); %>">
+									<img src="<%= getRelativePath('/images/common/tel.png'); %>" alt="0761243888">
+								</picture>
+							</a>
+						</div>
+						<div class="l-header__right__text u-onlyPc">10:00〜17:00<br>※土日祝休み</div>
+						<a href="#" class="l-header__right__btn c-button__form u-onlyPc"><span class="c-button__btntext">お問い合わせ</span></a>
 					</div>
 				</div>
 				<nav class="l-header__nav">
@@ -82,6 +91,7 @@
 					<span></span>
 					<span></span>
 					<span></span>
+					<p class="l-menu__text"></p>
 				</div>
 			</div>
 		</header>
@@ -91,8 +101,7 @@
 				<% if (getPageId()=='index' ) { %>
 					<div class="c-mainvisual">
 						<div class="c-mainvisual__list">							
-							<div class="c-mainvisual__item"
-							style="background-image: url('<%= getRelativePath('/images/index/bg_mv.jpg'); %>');">
+							<div class="c-mainvisual__item">
 							</div>
 						</div>
 					</div>
@@ -104,6 +113,5 @@
 							</h2>
 						</div>
 						<% } %>
-							<%- include('_breadline'); %>
 								<article>
 									<h2 class="is-none">Toho Yoko</h2>

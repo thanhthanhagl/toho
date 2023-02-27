@@ -18,9 +18,10 @@
 
                     &__inner {
                         &::before {
-                            background-image: url('/images/index/img_no1.svg');
-                            top: -17%;
-                            left: -20%;
+                            background-image: url('./images/index/img_no1.svg');
+                            top: 2%;
+                            left: -2%;
+                            transform: translate(-50%,-50%);
                         }
                     }
                 }
@@ -30,16 +31,19 @@
                 width: 56.8%;
                 z-index: 1;
                 &.--large {
-                    background-image: url('/images/index/img_service01.jpg');
+                    background-image: url('./images/index/img_service01.jpg');
                     background-size: cover;
                     background-repeat: no-repeat;
+                    background-position: center;
                     padding-bottom: 31.8%;
+                    height: 446px;
                 }
             }
         }
 
         &.--second {
-            max-width: 1090px;
+            max-width: 1130px;
+            padding: 0 20px;
             margin: 0 auto 91px;
             display: flex;
             justify-content: space-between;
@@ -84,13 +88,13 @@
 
                                 &__inner {
                                     &::before {
-                                        background-image: url('/images/index/img_no2.svg');
+                                        background-image: url('./images/index/img_no2.svg');
                                     }
                                 }
                             }
 
                             &__wrapimg {
-                                background-image: url('/images/index/img_service02.jpg');
+                                background-image: url('./images/index/img_service02.jpg');
                             }
                         }
                     }
@@ -103,13 +107,13 @@
                                 left: -5.5%;
                                 &__inner {
                                     &::before {
-                                        background-image: url('/images/index/img_no3.svg');
+                                        background-image: url('./images/index/img_no3.svg');
                                     }
                                 }
                             }
 
                             &__wrapimg {
-                                background-image: url('/images/index/img_service03.jpg');
+                                background-image: url('./images/index/img_service03.jpg');
                                 position: relative;
                                 top: 20px;
                             }
@@ -160,5 +164,33 @@
         letter-spacing: 0.8px;
         color: #333;
         font-size: rem(16);
+    }
+}
+@include media-breakpoint-tab-sp{
+    .c-servise{
+        margin: 1em 0;
+        &__textbox{
+            &__inner{
+                &::before{
+                    width: 115.2px;
+                    height: 64px;
+                }
+            }
+        }
+        &__title{
+            font-size: rem(20);
+        }
+        &__desc{
+            font-size: rem(13);
+        }
+        &__row{
+            &.--second{
+                .c-servise{
+                    &__title{
+                        font-size: rem(15);
+                    }
+                }
+            }
+        }
     }
 }

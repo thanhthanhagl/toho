@@ -4,8 +4,7 @@
         margin-top: -5rem;
     }
     &__servise{
-        padding-top: rem(80);
-        padding-bottom: rem(110);
+        padding:5.7% 0 7.8%;
         background: linear-gradient(to right, #f3f3f3 77.5%, #fff 22.5%);
         .c-heading{
             &.--multi{
@@ -14,12 +13,10 @@
         }
     }
     &__vehicle{
-        padding-top: rem(70);
-        padding-bottom: rem(110);
+        padding: 5.1% 0 7.9%;
     }
     &__works{
-        padding-top: 5.8%;
-        padding-bottom: 8%;
+        padding: 5.7% 0 7.8%;
         background-color: #f3f3f3;
         .c-desc{
             margin-top: 45px;
@@ -29,17 +26,25 @@
         }
     }
     &__recruit{
-        background-image: url('/images/index/bg_recruit.jpg');
+        background-image: url('./images/index/bg_recruit.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 7.1% 0;
+        padding: 7.1% 0 7.2%;
     }
     &__info{
-        padding: 8% 0;
+        padding: 7.85% 0 7.9%;
     }
     &__contact{
         background-color: #f0f0f0;
-        padding: 40px 0;
+        padding: 4.1% 0 2%;
+    }
+}
+//Phone
+@include media-breakpoint-sp{
+    .p-index{
+        .c-mainvisual{
+            margin-top: 0;
+        }
     }
 }

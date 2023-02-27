@@ -7,8 +7,22 @@
 
     &__col {
         width: calc((100% - 2px) / 2);
-        padding: 7.4% 0 8.5%;
+        padding: 7.5% 0 8.7%;
         position: relative;
+        transition: 0.5s all ease;
+        display: block;
+        &:hover{
+            opacity: 1;
+            &::before{
+                background-color: rgba(17, 17, 17, 0.3);
+            }
+            &.--left{
+                background-size: 120%;
+            }
+            &.--right{
+                background-size: 120%;
+            }
+        }
 
         &::before {
             content: "";
@@ -25,17 +39,19 @@
         }
 
         &.--left {
-            background-image: url('/images/index/img_company.jpg');
+            background-image: url('./images/index/img_company.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            z-index: -1;
+            background-position: center;
+            z-index: 1;
         }
 
         &.--right {
-            background-image: url('/images/index/img_faq.jpg');
+            background-image: url('./images/index/img_faq.jpg');
             background-size: cover;
             background-repeat: no-repeat;
-            z-index: -1;
+            background-position: center;
+            z-index: 1;
         }
     }
 

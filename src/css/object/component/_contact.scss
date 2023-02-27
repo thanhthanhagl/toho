@@ -5,20 +5,77 @@
     }
     &__col{
         &.--left{
-            width: 25%
-        };
+            width: 29%;
+            border-right: 1px solid rgba(74,74,74,0.2);   
+        }
         &.--right{
             width: 75%;
+            padding: 1.3% 0 4% 6.5%;
         }
     }
     &__info{
         display: flex;
         justify-content: space-between;
         &__left{
-            width: 50.8%;
+            width: 55%;
+            padding: 1% 0;
         }
         &__right{
-            width: 42.6%;
+            width: 43.4%;
+            max-width: 260px;
+        }     
+    }
+    
+    &__wrapimg{
+        width: 93%;
+        img{
+            width: 100%;
+        }
+    }
+    &__text{
+        font-size: rem(14);
+        letter-spacing: 0.05em;
+        font-feature-settings: "palt" 1;
+        font-weight: 300;
+        color: $text-color;
+        margin-top: 4px;
+    }  
+}
+//Tablet + Phone 
+@include media-breakpoint-tab-sp{
+    .c-contact{
+        &__text{
+            font-size: rem(12);
+        }
+        &__col{
+            &.--right{
+                padding: 1.3% 0 4% 4%;
+            }
+        }
+    }
+}
+//Phone
+@include media-breakpoint-sp{
+    .c-contact{
+        &__main{
+            flex-direction: column;
+        }
+        &__col{
+            &.--left{
+                width: 100%;
+            }
+            &.--right{
+                width: 100%;
+            }
+        }
+        &__info{
+            flex-direction: column;
+            &__left{
+                width: 100%;
+            }
+            &__right{
+                width: 100%;
+            }
         }
     }
 }

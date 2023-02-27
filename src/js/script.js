@@ -39,11 +39,12 @@ jQuery(function($) {
 		if ( $(this).hasClass('is-open') ) {
 			$(this).removeClass('is-open');
 			$('.l-header__item.is-hover').removeClass('is-open');
-			$('.l-header__subitem').slideUp(500);
-			$headerNav.fadeOut(300);
+			$headerNav.fadeOut(600);
+			$('body').addClass('is-fixed')
 		} else {
 			$(this).addClass('is-open');
-			$headerNav.fadeIn(300);
+			$headerNav.fadeIn(600);
+			$('body').removeClass('is-fixed')
 		}
 	});
 
