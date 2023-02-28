@@ -22,12 +22,12 @@
         font-weight: 300;
         font-size: rem(18);
         letter-spacing: 0.05em;
-        line-height: 2.4;
+        line-height: 2.2;
         color: $text-color;
         display: flex;
         justify-content: space-between;
         text-indent: 6px;
-        margin-bottom: 5px;
+        margin-bottom: 8.5px;
         &__text{
             &:first-child{
                 &::before {
@@ -39,7 +39,7 @@
                     background-color: $brand-color;
                     position: relative;
                     left: -8px;
-                    top:-4px;
+                    top:-2px;
                 }
             }
         }        
@@ -47,18 +47,60 @@
         &__note {
             font-family: $font-family-hira;
             font-size: rem(14);
-            line-height: 3;
+            line-height: 2.8;
             color: #888;
             display: block;
-            margin-top: -18px;
+            margin-top: -15px;
             margin-left: 5px;
         }
     }
 }
+//Tablet + Phone
 @include media-breakpoint-tab-sp{
     .c-vehicle{
         &__item{
             font-size: rem(13);
+        }
+    }
+}
+//Phone
+@include media-breakpoint-sp{
+    .c-vehicle{
+        &__main{
+            flex-direction: column;
+            margin-top: 26px;
+        }
+        &__col{
+            &.--img{
+                width: 100%;
+                text-align: center;
+            }
+            &.--textbox{
+                width: 100%;
+                margin: 22px auto 0;
+                max-width: 520px;
+            }
+        }
+        &__item{
+            margin-bottom: 7px;
+            line-height: 1.6;
+            &__text{
+                &:first-child{
+                    &::before{
+                        width: 8px;
+                        height: 8px;
+                        left: -6px;
+                        top: -1px;
+                    }
+                }
+            }
+            &__note{
+                font-size: rem(11);
+                line-height: 1.9;
+                margin-top: -2px;
+                letter-spacing: 0.05em;
+                margin-left: 8px;
+            }
         }
     }
 }

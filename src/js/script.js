@@ -13,25 +13,6 @@ jQuery(function($) {
 		headerHeight();
 
 //
-// viewport resize
-//------------------------------------
-// $(window).on('resize orientationchange', function() {
-// 	if ($menuButton.css('display') == 'none') {
-// 		if (!desktopMode) {
-// 			desktopMode = true;
-// 			$('head').find('meta[name="viewport"]').attr('content', 'width=1240');
-// 		}
-// 	} else {
-// 		if (desktopMode) {
-// 			desktopMode = false;
-// 			$('head').find('meta[name="viewport"]').attr('content', 'width=device-width,initial-scale=1,user-scalable=yes');
-// 		}
-// 	}
-// 	$(this).trigger('scroll');
-// }).trigger('resize');
-
-
-//
 // header-menu
 //------------------------------------
 	//ハンバーガーボタンクリック
@@ -39,12 +20,12 @@ jQuery(function($) {
 		if ( $(this).hasClass('is-open') ) {
 			$(this).removeClass('is-open');
 			$('.l-header__item.is-hover').removeClass('is-open');
-			$headerNav.fadeOut(600);
-			$('body').addClass('is-fixed')
+			$headerNav.css('left','-100%');
+			$('body').removeClass('is-fixed');
 		} else {
 			$(this).addClass('is-open');
-			$headerNav.fadeIn(600);
-			$('body').removeClass('is-fixed')
+			$headerNav.css('left','0');
+			$('body').addClass('is-fixed');
 		}
 	});
 
@@ -53,10 +34,8 @@ jQuery(function($) {
 		if(!desktopMode){
 			if ( $(this).hasClass('is-open') ) {
 				$(this).removeClass('is-open');
-				$(this).children('.l-header__subitem').slideUp(500)
 			} else {
 				$(this).addClass('is-open');
-				$(this).children('.l-header__subitem').slideDown(500)
 			}
 		}
 	});	
@@ -65,7 +44,6 @@ jQuery(function($) {
 //------------------------------------
 var $pagetop = $('.js-pagetop');
 $pagetop.click(function() {
-	console.log('a')
 	$('body,html').stop().animate({scrollTop: 0}, 500);
 	return false;
 });
@@ -97,23 +75,8 @@ $pagetop.click(function() {
 			}, 0);
 		}
 	})
-
-//
-// アコーディオン関係js ここから
-//------------------------------------
-	$('.js-accordion1 > * >:first-child').click(function() {
-		$(this).next().slideToggle();
-		$(this).toggleClass('is-close');
-
-	})
-	$(window).on('load', function() {
-		const firstAccordion = $('.js-accordion1 >*:first-child');
-		firstAccordion.addClass('is-open');
-		$('.js-accordion1 .is-open').each(function (index, element) {
-		$(element).children(":first-child").addClass('is-close');
-		$(element).children(":nth-child(2)").slideDown();
-		})
-	})
-
-
+	//fade in up
+	AOS.init({
+		duration: 1000,
+	  });
 });

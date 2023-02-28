@@ -19,7 +19,8 @@
 	<link rel="shortcut icon" href="./favicon.svg">
 	<link rel="apple-touch-icon" href="./apple-touch-icon.png">
 	<link rel="stylesheet" href="./css/slick.css">
-	<link rel="stylesheet" href="./style.css?8b16ec83d6dcabbb">
+	<link rel="stylesheet" href="./style.css?07f257251cad02e9">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="p-index">
@@ -84,6 +85,20 @@
 									</a>
 								</li>
 							</ul>
+							<div class="l-header__info u-onlySp">
+								<div class="l-header__info__top">
+									<div class="l-header__wrapimg">
+										<a class="is-call" href="tel:0761243888"><img
+												src="./images/index/tel.png"
+												alt="0761243888"></a>
+									</div>
+									<div class="l-header__text">電話受付時間　10:00〜17:00 ※土日祝を除く</div>
+								</div>
+								<div class="l-header__info__bottom">
+									<div class="c-button__form">
+										<a href="#" class="c-button__btntext"><span>お問い合わせ</span></a>
+									</div>
+								</div>
 						</div>
 					</div>
 				</nav>
@@ -112,7 +127,11 @@
 			<div class="l-inner">
 				<div class="c-heading --multi">
 					<div class="c-heading__subtitle">
-						<img src="./images/index/txt_service.png" alt="Service">
+						<picture>
+							<source media="(max-width:739px)"
+								srcset="./images/index/txt_service_sp.png">
+							<img src="./images/index/txt_service.png" alt="Service">
+						</picture>
 					</div>
 					<h2 class="c-heading__title">事業内容</h2>
 				</div>
@@ -144,7 +163,8 @@
 							<div class="c-servise__textbox">
 								<div class="c-servise__textbox__inner">
 									<h3 class="c-servise__title">溶接部品販売店業</h3>
-									<p class="c-servise__desc">溶接部品の販売を行なっています。自社で在庫管理を行うため、消耗部品の納入も迅速に対応することが可能です。</p>
+									<p class="c-servise__desc">溶接部品の販売を行なっています。<br
+											class="u-onlySp">自社で在庫管理を行うため、消耗部品の納入も迅速に対応することが可能です。</p>
 								</div>
 							</div>
 							<div class="c-servise__wrapimg --small"></div>
@@ -207,46 +227,50 @@
 			<div class="l-inner">
 				<div class="c-heading --multi">
 					<div class="c-heading__subtitle">
-						<img src="./images/index/txt_works.png" alt="Works">
+						<picture>
+							<source media="(max-width:739px)"
+								srcset="./images/index/txt_works_sp.png">
+							<img src="./images/index/txt_works.png" alt="Works">
+						</picture>
 					</div>
 					<h2 class="c-heading__title">事例紹介</h2>
 				</div>
 				<div class="c-desc --center">東邦重量では機械の運搬・設置だけでなく、工場内の配置換えなども対応しています。<br>東邦重量のこれまでの実績をご紹介します。</div>
 				<div class="c-works">
-					<div class="l-imgTxt --col3">
-						<a href="./" class="l-imgTxt__item">
-							<div class="l-imgTxt__img">
+					<div class="c-works --col3" data-aos="fade-up">
+						<a href="./" class="c-works__item" >
+							<div class="c-works__img">
 								<img src="./images/index/feature_img.jpg"
 									alt="作業内容が入ります１８文字程度">
 							</div>
-							<div class="l-imgTxt__content">
-								<div class="l-imgTxt__title">作業内容が入ります１８文字程度</div>
-								<div class="l-imgTxt__label --blue">据え付け</div>
-								<p class="l-imgTxt__text">
+							<div class="c-works__content">
+								<div class="c-works__title">作業内容が入ります１８文字程度</div>
+								<div class="c-works__label --blue">据え付け</div>
+								<p class="c-works__text">
 									石川県金沢市
 								</p>
 							</div>
 						</a>
-						<a href="./" class="l-imgTxt__item">
-							<div class="l-imgTxt__img">
+						<a href="./" class="c-works__item">
+							<div class="c-works__img">
 								<img src="./images/index/feature_img.jpg" alt="冷凍機の搬入・据付">
 							</div>
-							<div class="l-imgTxt__content">
-								<div class="l-imgTxt__title">冷凍機の搬入・据付</div>
-								<div class="l-imgTxt__label --blue">据え付け</div>
-								<p class="l-imgTxt__text">
+							<div class="c-works__content">
+								<div class="c-works__title">冷凍機の搬入・据付</div>
+								<div class="c-works__label --blue">据え付け</div>
+								<p class="c-works__text">
 									石川県金沢市
 								</p>
 							</div>
 						</a>
-						<a href="./" class="l-imgTxt__item">
-							<div class="l-imgTxt__img">
+						<a href="./" class="c-works__item">
+							<div class="c-works__img">
 								<img src="./images/index/feature_img.jpg" alt="クレーン作業">
 							</div>
-							<div class="l-imgTxt__content">
-								<div class="l-imgTxt__title">クレーン作業</div>
-								<div class="l-imgTxt__label --green">配置換え</div>
-								<p class="l-imgTxt__text">
+							<div class="c-works__content">
+								<div class="c-works__title">クレーン作業</div>
+								<div class="c-works__label --green">配置換え</div>
+								<p class="c-works__text">
 									石川県金沢市
 								</p>
 							</div>
@@ -260,10 +284,15 @@
 		<section class="p-index__recruit">
 			<div class="l-inner">
 				<div class="c-recruit">
-					<h2 class="c-recruit__title"><img src="./images/index/recruit_title.png"
-							alt="recruit"></h2>
-					<div class="c-recruit__desc">小さくとも成長を重ねて、<br>
-						協力し合える関係を築いていける方にお会いできることを楽しみにしています。</div>
+					<h2 class="c-recruit__title">
+						<picture>
+							<source media="(max-width:739px)"
+								srcset="./images/index/recruit_title_sp.png">
+							<img src="./images/index/recruit_title.png" alt="recruit">
+						</picture>
+					</h2>
+					<div class="c-recruit__desc">小さくとも成長を重ねて、<br class="u-onlyPc">協力し合える関係を築いていける方にお会いできることを楽しみにしています。
+					</div>
 					<div class="c-button --center">
 						<a href="./" class="c-button__recruit">採用情報を見る</a>
 					</div>
@@ -277,10 +306,16 @@
 						<a href="./" class="c-info__col --left">
 							<div class="c-info__inner">
 								<div class="c-headingred">
-									<div class="c-headingred__subtitle"><img
-											src="./images/index/company.png" alt="company">
+									<div class="c-headingred__subtitle">
+										<picture>
+											<source media="(max-width:739px)"
+												srcset="./images/index/company_sp.png">
+											<img src="./images/index/company.png"
+												alt="company">
+										</picture>
 									</div>
-									<h2 class="c-headingred__title">会社概要</h2>
+									<h2 class="c-headingred__title"><span class="u-onlyPc">会社概要</span><span
+											class="u-onlySp">会社案内</span></h2>
 								</div>
 								<div class="c-desc --info">東邦株式会社は1978年に創業、<br>重量物の運搬・据付を行って参りました。</div>
 							</div>
@@ -288,12 +323,17 @@
 						<a href="./" class="c-info__col --right">
 							<div class="c-info__inner">
 								<div class="c-headingred">
-									<div class="c-headingred__subtitle"><img
-											src="./images/index/faq.png" alt="faq"></div>
+									<div class="c-headingred__subtitle">
+										<picture>
+											<source media="(max-width:739px)"
+												srcset="./images/index/faq_sp.png">
+											<img src="./images/index/faq.png" alt="faq">
+										</picture>
+									</div>
 									<h2 class="c-headingred__title">よくある質問</h2>
 								</div>
 								<div class="c-desc --info">重量物の運搬・据付などの業務において、<br>よくいただく質問をまとめました。</div>
-							</div>							
+							</div>
 						</a>
 					</div>
 				</div>
@@ -306,8 +346,12 @@
 						<div class="c-contact__col --left">
 							<div class="c-heading --contact">
 								<h2 class="c-heading__title">お問い合わせ</h2>
-								<div class="c-heading__subtitle"><img
-										src="./images/index/contact.png" alt="contact"></div>
+								<div class="c-heading__subtitle">
+									<picture>
+										<source media="(max-width:739px)" srcset="./images/index/contact_sp.png">
+										<img src="./images/index/contact.png" alt="contact">
+									</picture>
+								</div>
 							</div>
 						</div>
 						<div class="c-contact__col --right">
@@ -322,7 +366,7 @@
 									<div class="c-contact__text">電話受付時間　10:00〜17:00 ※土日祝を除く</div>
 								</div>
 								<div class="c-contact__info__right">
-									<div class="c-button__form --contact">										
+									<div class="c-button__form --contact">
 										<a href="#" class="c-button__btntext --fs16"><span>お問い合わせ</span></a>
 									</div>
 								</div>
@@ -332,76 +376,82 @@
 				</div>
 			</div>
 		</section>
-						</article>
-				<!-- /article -->
-			</main>
-			<!-- /.l-primary -->
-			<div class="c-pagetop js-pagetop">
-				<div class="c-pagetop__wrapimg"><img src="./images/common/txt_pagetop.png" alt="pagetop"></div>
-			</div>			
-			<!-- /.c-pagetop -->
-		</div>
-		<!-- /.l-content -->
-		<footer class="l-footer">
-			<div class="l-footer__inner">
-				<div class="l-footer__contents">
-					<div class="l-footer__top">
-						<div class="l-footer__top --left">
-							<div class="l-footer__wraplogo"><a href="./">
-								<picture>
-									<source media="(max-width:739px)" srcset="./images/common/flogo_sp.png">
-									<img src="./images/common/logo.png" alt="Toho Yoko" class="l-footer__logo">
-								</picture>
-							</a></div>
-							<div class="l-footer__info">
-								<p class="l-footer__text">東邦株式会社（東邦重量）</p>
-								<div class="u-group">
-									<p class="l-footer__text">TEL：<a href="tel:0761243888" class="is-call">0761-24-3888</a></p>
-									<p class="l-footer__text">FAX：0761-24-1455</p>
-								</div>
-								<p class="l-footer__text">〒923-0036 石川県小松市平面町ヘ−118</p>
-							</div>
-							<div class="c-button__form --footer"><a href="./" class="c-button__btntext">お問い合わせ</a></div>
+		</article>
+<!-- /article -->
+</main>
+<!-- /.l-primary -->
+<div class="c-pagetop js-pagetop">
+	<div class="c-pagetop__wrapimg"><img src="./images/common/txt_pagetop.png" alt="pagetop">
+	</div>
+</div>
+<!-- /.c-pagetop -->
+</div>
+<!-- /.l-content -->
+<footer class="l-footer">
+	<div class="l-footer__inner">
+		<div class="l-footer__contents">
+			<div class="l-footer__top">
+				<div class="l-footer__top --left">
+					<div class="l-footer__wraplogo"><a href="./">
+							<picture>
+								<source media="(max-width:739px)"
+									srcset="./images/common/flogo_sp.png">
+								<img src="./images/common/logo.png" alt="Toho Yoko"
+									class="l-footer__logo">
+							</picture>
+						</a></div>
+					<div class="l-footer__info">
+						<p class="l-footer__text">東邦株式会社（東邦重量）</p>
+						<div class="u-group">
+							<p class="l-footer__text">TEL：<a href="tel:0761243888" class="is-call">0761-24-3888</a></p>
+							<p class="l-footer__text">FAX：0761-24-1455</p>
 						</div>
-						<div class="l-footer__top --right">
-							<ul class="l-footer__list">
-								<li class="l-footer__col u-onlyPc">
-									<ul class="l-footer__col__items">
-										<li class="l-footer__link"><a href="./">トップページ</a></li>
-										<li class="l-footer__link"><a href="./">東邦重量の特徴</a></li>
-										<li class="l-footer__link"><a href="./">事業内容</a></li>
-									</ul>
-								</li>
-								<li class="l-footer__col u-onlyPc">
-									<ul class="l-footer__col__items">
-										<li class="l-footer__link"><a href="./">事例紹介</a></li>
-										<li class="l-footer__link"><a href="./">会社案内</a></li>
-										<li class="l-footer__link"><a href="./">採用情報</a></li>
-									</ul>
-								</li>
-								<li class="l-footer__col">
-									<ul class="l-footer__col__items">
-										<li class="l-footer__link"><a href="./">お問い合わせ</a></li>
-										<li class="l-footer__link"><a href="./">プライバシーポリシー</a></li>
-									</ul>
-								</li>
+						<p class="l-footer__text">〒923-0036 石川県小松市平面町ヘ−118</p>
+					</div>
+					<div class="c-button__form --footer u-onlyPc"><a href="./"
+							class="c-button__btntext">お問い合わせ</a></div>
+				</div>
+				<div class="l-footer__top --right">
+					<ul class="l-footer__list">
+						<li class="l-footer__col u-onlyPc">
+							<ul class="l-footer__col__items">
+								<li class="l-footer__link"><a href="./">トップページ</a></li>
+								<li class="l-footer__link"><a href="./">東邦重量の特徴</a></li>
+								<li class="l-footer__link"><a href="./">事業内容</a></li>
 							</ul>
-						</div>
-					</div>
-					<div class="l-footer__bottom">						
-						<p class="l-footer__copyright">©2019 東邦株式会社</p>
-					</div>
+						</li>
+						<li class="l-footer__col u-onlyPc">
+							<ul class="l-footer__col__items">
+								<li class="l-footer__link"><a href="./">事例紹介</a></li>
+								<li class="l-footer__link"><a href="./">会社案内</a></li>
+								<li class="l-footer__link"><a href="./">採用情報</a></li>
+							</ul>
+						</li>
+						<li class="l-footer__col">
+							<ul class="l-footer__col__items">
+								<li class="l-footer__link"><a href="./">お問い合わせ</a></li>
+								<li class="l-footer__link"><a href="./">プライバシーポリシー</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</footer>
-		<!-- /.l-footer -->
+			<div class="l-footer__bottom">
+				<p class="l-footer__copyright">©2019 東邦株式会社</p>
+			</div>
+		</div>
 	</div>
-	<!-- /.l-all -->
-	<script src="./js/jquery-3.6.0.min.js"></script>
-	<script src="./js/script.js?9c037a26f0c6565c"></script>
+</footer>
+<!-- /.l-footer -->
+</div>
+<!-- /.l-all -->
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/script.js?9ac9fcef0b71636c"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script src="./js/slick.min.js"></script>
+	<script src="./js/index.js?70aef1ee39c5c2ea"></script>
 	
-		<script src="./js/slick.min.js"></script>
-		<script src="./js/index.js?70aef1ee39c5c2ea"></script>
-	
-</body>
-</html>   
+		</body>
+
+		</html>

@@ -1,10 +1,14 @@
 <%- include('_config', { extend: { relativePath: '.' , page: { id: 'index' , title: 'Toho Yoko' ,
-	description: 'TOP Toho Yoko', } }}); %><%- include('_header'); %>
+	description: 'TOP Toho Yoko' , } }}); %><%- include('_header'); %>
 		<section class="p-index__servise">
 			<div class="l-inner">
 				<div class="c-heading --multi">
 					<div class="c-heading__subtitle">
-						<img src="<%= getRelativePath('/images/index/txt_service.png')%>" alt="Service">
+						<picture>
+							<source media="(max-width:739px)"
+								srcset="<%= getRelativePath('/images/index/txt_service_sp.png')%>">
+							<img src="<%= getRelativePath('/images/index/txt_service.png')%>" alt="Service">
+						</picture>
 					</div>
 					<h2 class="c-heading__title">事業内容</h2>
 				</div>
@@ -36,7 +40,8 @@
 							<div class="c-servise__textbox">
 								<div class="c-servise__textbox__inner">
 									<h3 class="c-servise__title">溶接部品販売店業</h3>
-									<p class="c-servise__desc">溶接部品の販売を行なっています。自社で在庫管理を行うため、消耗部品の納入も迅速に対応することが可能です。</p>
+									<p class="c-servise__desc">溶接部品の販売を行なっています。<br
+											class="u-onlySp">自社で在庫管理を行うため、消耗部品の納入も迅速に対応することが可能です。</p>
 								</div>
 							</div>
 							<div class="c-servise__wrapimg --small"></div>
@@ -99,46 +104,50 @@
 			<div class="l-inner">
 				<div class="c-heading --multi">
 					<div class="c-heading__subtitle">
-						<img src="<%= getRelativePath('/images/index/txt_works.png')%>" alt="Works">
+						<picture>
+							<source media="(max-width:739px)"
+								srcset="<%= getRelativePath('/images/index/txt_works_sp.png')%>">
+							<img src="<%= getRelativePath('/images/index/txt_works.png')%>" alt="Works">
+						</picture>
 					</div>
 					<h2 class="c-heading__title">事例紹介</h2>
 				</div>
 				<div class="c-desc --center">東邦重量では機械の運搬・設置だけでなく、工場内の配置換えなども対応しています。<br>東邦重量のこれまでの実績をご紹介します。</div>
 				<div class="c-works">
-					<div class="l-imgTxt --col3">
-						<a href="<%= getRelativePath('/');%>" class="l-imgTxt__item">
-							<div class="l-imgTxt__img">
+					<div class="c-works --col3" data-aos="fade-up">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item" >
+							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>"
 									alt="作業内容が入ります１８文字程度">
 							</div>
-							<div class="l-imgTxt__content">
-								<div class="l-imgTxt__title">作業内容が入ります１８文字程度</div>
-								<div class="l-imgTxt__label --blue">据え付け</div>
-								<p class="l-imgTxt__text">
+							<div class="c-works__content">
+								<div class="c-works__title">作業内容が入ります１８文字程度</div>
+								<div class="c-works__label --blue">据え付け</div>
+								<p class="c-works__text">
 									石川県金沢市
 								</p>
 							</div>
 						</a>
-						<a href="<%= getRelativePath('/');%>" class="l-imgTxt__item">
-							<div class="l-imgTxt__img">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item">
+							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>" alt="冷凍機の搬入・据付">
 							</div>
-							<div class="l-imgTxt__content">
-								<div class="l-imgTxt__title">冷凍機の搬入・据付</div>
-								<div class="l-imgTxt__label --blue">据え付け</div>
-								<p class="l-imgTxt__text">
+							<div class="c-works__content">
+								<div class="c-works__title">冷凍機の搬入・据付</div>
+								<div class="c-works__label --blue">据え付け</div>
+								<p class="c-works__text">
 									石川県金沢市
 								</p>
 							</div>
 						</a>
-						<a href="<%= getRelativePath('/');%>" class="l-imgTxt__item">
-							<div class="l-imgTxt__img">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item">
+							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>" alt="クレーン作業">
 							</div>
-							<div class="l-imgTxt__content">
-								<div class="l-imgTxt__title">クレーン作業</div>
-								<div class="l-imgTxt__label --green">配置換え</div>
-								<p class="l-imgTxt__text">
+							<div class="c-works__content">
+								<div class="c-works__title">クレーン作業</div>
+								<div class="c-works__label --green">配置換え</div>
+								<p class="c-works__text">
 									石川県金沢市
 								</p>
 							</div>
@@ -152,10 +161,15 @@
 		<section class="p-index__recruit">
 			<div class="l-inner">
 				<div class="c-recruit">
-					<h2 class="c-recruit__title"><img src="<%= getRelativePath('/images/index/recruit_title.png');%>"
-							alt="recruit"></h2>
-					<div class="c-recruit__desc">小さくとも成長を重ねて、<br>
-						協力し合える関係を築いていける方にお会いできることを楽しみにしています。</div>
+					<h2 class="c-recruit__title">
+						<picture>
+							<source media="(max-width:739px)"
+								srcset="<%= getRelativePath('/images/index/recruit_title_sp.png');%>">
+							<img src="<%= getRelativePath('/images/index/recruit_title.png');%>" alt="recruit">
+						</picture>
+					</h2>
+					<div class="c-recruit__desc">小さくとも成長を重ねて、<br class="u-onlyPc">協力し合える関係を築いていける方にお会いできることを楽しみにしています。
+					</div>
 					<div class="c-button --center">
 						<a href="<%= getRelativePath('/');%>" class="c-button__recruit">採用情報を見る</a>
 					</div>
@@ -169,10 +183,16 @@
 						<a href="<%= getRelativePath('/');%>" class="c-info__col --left">
 							<div class="c-info__inner">
 								<div class="c-headingred">
-									<div class="c-headingred__subtitle"><img
-											src="<%= getRelativePath('/images/index/company.png')%>" alt="company">
+									<div class="c-headingred__subtitle">
+										<picture>
+											<source media="(max-width:739px)"
+												srcset="<%= getRelativePath('/images/index/company_sp.png');%>">
+											<img src="<%= getRelativePath('/images/index/company.png');%>"
+												alt="company">
+										</picture>
 									</div>
-									<h2 class="c-headingred__title">会社概要</h2>
+									<h2 class="c-headingred__title"><span class="u-onlyPc">会社概要</span><span
+											class="u-onlySp">会社案内</span></h2>
 								</div>
 								<div class="c-desc --info">東邦株式会社は1978年に創業、<br>重量物の運搬・据付を行って参りました。</div>
 							</div>
@@ -180,12 +200,17 @@
 						<a href="<%= getRelativePath('/');%>" class="c-info__col --right">
 							<div class="c-info__inner">
 								<div class="c-headingred">
-									<div class="c-headingred__subtitle"><img
-											src="<%= getRelativePath('/images/index/faq.png')%>" alt="faq"></div>
+									<div class="c-headingred__subtitle">
+										<picture>
+											<source media="(max-width:739px)"
+												srcset="<%= getRelativePath('/images/index/faq_sp.png');%>">
+											<img src="<%= getRelativePath('/images/index/faq.png');%>" alt="faq">
+										</picture>
+									</div>
 									<h2 class="c-headingred__title">よくある質問</h2>
 								</div>
 								<div class="c-desc --info">重量物の運搬・据付などの業務において、<br>よくいただく質問をまとめました。</div>
-							</div>							
+							</div>
 						</a>
 					</div>
 				</div>
@@ -198,8 +223,12 @@
 						<div class="c-contact__col --left">
 							<div class="c-heading --contact">
 								<h2 class="c-heading__title">お問い合わせ</h2>
-								<div class="c-heading__subtitle"><img
-										src="<%= getRelativePath('/images/index/contact.png');%>" alt="contact"></div>
+								<div class="c-heading__subtitle">
+									<picture>
+										<source media="(max-width:739px)" srcset="<%= getRelativePath('/images/index/contact_sp.png');%>">
+										<img src="<%= getRelativePath('/images/index/contact.png');%>" alt="contact">
+									</picture>
+								</div>
 							</div>
 						</div>
 						<div class="c-contact__col --right">
@@ -214,7 +243,7 @@
 									<div class="c-contact__text">電話受付時間　10:00〜17:00 ※土日祝を除く</div>
 								</div>
 								<div class="c-contact__info__right">
-									<div class="c-button__form --contact">										
+									<div class="c-button__form --contact">
 										<a href="#" class="c-button__btntext --fs16"><span>お問い合わせ</span></a>
 									</div>
 								</div>

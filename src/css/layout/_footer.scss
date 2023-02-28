@@ -17,7 +17,7 @@
 	&__top{
 		display: flex;
 		justify-content: space-between;
-		padding-bottom: 13.4%;
+		padding-bottom: 11%;
 		&.--left{
 			width: 31.2%;
 			display: flex;
@@ -29,13 +29,13 @@
 	}
 	&__wraplogo{
 		width: 82.8%;
-		margin-bottom: 15px;
+		margin-bottom: 13px;
 	}
 	&__logo{
 		width: 100%;
 	}
 	&__info{
-		margin-bottom: 20px;
+		margin-bottom: 22px;
 	}
 	&__text{
 		color: $text-color;
@@ -53,10 +53,10 @@
 		width: 28.6%;
 	}
 	&__link{
-		margin-bottom: 33px;
+		margin-bottom: 41px;
 		font-size: rem(14);
 		letter-spacing: 0.05em;
-		line-height: 1.5;
+		line-height: 1;
 		color: $text-color;
 		&::before{
 			content: "";
@@ -67,12 +67,10 @@
 			background-repeat: no-repeat;
 			display: inline-block;
 			margin-right:5px;
-			position: relative;
-			top: -3px;
 		}
 	}
 	&__bottom{
-		position: 44px 0 0 ;
+		padding: 44px 0 0 ;
 	}
 	&__copyright {
 		text-align: center;
@@ -103,10 +101,15 @@
 		}
 	}
 }
+//Phone
 @include media-breakpoint-sp{
 	.l-footer{
+		&__contents{
+			padding: 40px 0 12px;
+		}
 		&__top{
 			flex-direction: column;
+			padding-bottom: 0;
 			&.--left{
 				width: 100%;
 			}
@@ -114,15 +117,24 @@
 				width: 100%;
 			}
 		}
+		&__bottom{
+			padding: 87px 0 0;
+		}
 		&__wraplogo{
-			max-width: 180px;
-			margin: 0 auto 15px;
+			max-width: 26.5%;
+			margin: 0 auto 18px;
+		}
+		&__info{
+			margin-bottom: 23px;
 		}
 		&__text{
 			text-align: center;
+			line-height: 1.67;
 		}
 		&__col{
 			width: 100%;
+			max-width: 480px;
+			margin: 0 auto;
 			&__items{
 				display: flex;
 				flex-direction: row-reverse;
@@ -132,12 +144,13 @@
 			width: 50%;
 			text-decoration: underline;
 			&:first-child{
-				padding-left: 40px;
+				padding-left: 20px;
 			}
 			&:last-child{
 				text-align: right;
-				padding-right: 40px;
+				padding-right: 20px;
 				border-right: 1px solid #333;
+				width: 68%;
 			}
 			&::before{
 				display: none;

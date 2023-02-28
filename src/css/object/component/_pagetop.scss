@@ -29,3 +29,12 @@
         mix-blend-mode: normal;
     }
 }
+//Phone
+@include media-breakpoint-sp{
+    .c-pagetop{
+        padding: 8px 0 10px;
+        &__wrapimg{
+            width: 20%;
+        }
+    }
+}

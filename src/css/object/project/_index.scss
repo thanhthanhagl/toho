@@ -8,18 +8,18 @@
         background: linear-gradient(to right, #f3f3f3 77.5%, #fff 22.5%);
         .c-heading{
             &.--multi{
-                margin-bottom: rem(90);
+                margin-bottom: rem(96);
             }
         }
     }
     &__vehicle{
-        padding: 5.1% 0 7.9%;
+        padding: 5.5% 0 7.9%;
     }
     &__works{
-        padding: 5.7% 0 7.8%;
+        padding: 5.75% 0 3.6%;
         background-color: #f3f3f3;
         .c-desc{
-            margin-top: 45px;
+            margin-top: 50px;
         }
         .l-imgTxt{
             margin-bottom: 60px;
@@ -37,7 +37,7 @@
     }
     &__contact{
         background-color: #f0f0f0;
-        padding: 4.1% 0 2%;
+        padding: 4.5% 0 4%;
     }
 }
 //Phone
@@ -45,6 +45,62 @@
     .p-index{
         .c-mainvisual{
             margin-top: 0;
+            margin-bottom: 55px;
+        }
+        &__servise{
+            padding: 19px 0 55px;
+            background: linear-gradient(to right, #f3f3f3 80%, #fff 20%);
+            .c-heading{
+                &.--multi{
+                    margin-bottom: rem(38);
+                }
+            }
+        }
+        &__vehicle{
+            padding: 38px 0 44px;
+        }
+        &__works{
+            padding: 19px 0 55px;
+            .c-heading{
+                &.--multi{
+                    .c-heading{
+                        &__subtitle{
+                            width: 13.5%;
+                        }
+                    }
+                }
+            }
+            .c-desc{
+                margin-top: 31px;
+                text-align: left;
+                line-height: 1.7;
+            }
+            .c-button{
+                &__more{
+                    padding: 17px 20px 18px;
+                }
+            }
+        }
+        &__recruit{
+            background-image: url('./images/index/bg_recruit_sp.jpg');
+            padding: 60px 0 55px;
+            .c-button{
+                padding: 0 15px;
+                &__recruit{
+                    padding: 15px 10px 16px;
+                    &::after{
+                        width: 6.5px;
+                        height: 10px;
+                        right: 10%;
+                    }
+                }
+            }
+        }
+        &__info{
+            padding: 55px 0 53px;
+        }
+        &__contact{
+            padding: 33px 0 55px;
         }
     }
 }

@@ -10,7 +10,7 @@
     }
     &.--info{
         color: #fff;
-        margin-top: 38px;
+        margin-top: 36px;
     }
     &.--contact{
         line-height: 1.6;
@@ -20,5 +20,14 @@
 @include media-breakpoint-tab-sp{
     .c-desc{
         font-size: rem(13);
+        &.--info{
+            margin-top: 29px;
+            font-size: rem(11);
+        }
+        &.--contact{
+            line-height: 1.7;
+            margin-right:-1px;
+            margin-bottom: 1.9em;
+        }
     }
 }

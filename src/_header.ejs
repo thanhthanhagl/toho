@@ -20,6 +20,7 @@
 	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
 	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
 	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="<%= getBodyClass(); %>">
@@ -84,6 +85,20 @@
 									</a>
 								</li>
 							</ul>
+							<div class="l-header__info u-onlySp">
+								<div class="l-header__info__top">
+									<div class="l-header__wrapimg">
+										<a class="is-call" href="tel:0761243888"><img
+												src="<%= getRelativePath('/images/index/tel.png'); %>"
+												alt="0761243888"></a>
+									</div>
+									<div class="l-header__text">電話受付時間　10:00〜17:00 ※土日祝を除く</div>
+								</div>
+								<div class="l-header__info__bottom">
+									<div class="c-button__form">
+										<a href="#" class="c-button__btntext"><span>お問い合わせ</span></a>
+									</div>
+								</div>
 						</div>
 					</div>
 				</nav>

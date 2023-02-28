@@ -18,5 +18,6 @@
 @include media-breakpoint-sp {
 	.l-inner {
 		padding: 0 $pd-x-sp;
+		max-width: 540px;
 	}
 }

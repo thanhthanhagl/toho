@@ -22,6 +22,9 @@ body {
 	word-wrap: normal;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
+	&.is-fixed{
+		overflow: hidden;
+	}
 }
 
 a {

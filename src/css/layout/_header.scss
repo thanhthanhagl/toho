@@ -92,7 +92,7 @@
 			border-right: 1px solid rgba(51,51,51,0.2);
 		}
 		& > a {
-			font-size:clamp( rem(15), 1vw ,rem(16));
+			font-size:clamp( rem(13), 1vw ,rem(16));
 			font-weight: 600;
 			height: 100%;
 			display: flex;
@@ -207,6 +207,9 @@
 // --------------------------------------------------
 @include media-breakpoint-sp {
 	.l-header {
+		position: fixed;
+		top:0;
+		left: 0;
 		&__top{
 			padding: 0 0 0 20px; 
 		}
@@ -246,7 +249,7 @@
 					color: #fff;
 					font-family: $font-family-folk;
 					font-size: rem(9);
-					letter-spacing: 0.075em;
+					letter-spacing: 0.15em;
 					line-height: 1.9;
 					font-weight: 600;
 				}
@@ -265,7 +268,6 @@
 			}
 		}
 		&__nav {
-			display: none;
 			position: fixed;
 			top: 55px;
 			left: 0;
@@ -275,16 +277,20 @@
 			background-color: #f0f0f0;
 			z-index: 10;
 			border-top: 0;
+			overflow-y: auto;
+			transition: 0.6s all linear;
 			&__inner{
-				padding: 28px 5px;
+				padding: 29px 5px;
 			}
 		}
 		&__list {
 			display: block;
+			height: auto;
+			margin-bottom: 29px;
 		}
 		&__item {
 			border-bottom: 1px solid rgba(51,51,51,0.2);
-			padding: 8px 25px;
+			padding: 5px 25px;
 			position: relative;
 			width: 100%;
 			border-left:0;
@@ -294,8 +300,30 @@
 			}
 			a {
 				font-size: rem(15);
+				line-height: 1.5;
+				span{
+					padding: 11px 0;
+				}
 			}
 		}
+		&__info{
+			padding-bottom: 90px;
+			&__top{
+                border: 2px solid $brand-color;
+                padding: 7% 11% 5.7%;
+				margin-bottom: 15px;
+			}
+		}
+		&__text{
+			font-size: rem(11);
+			letter-spacing: 0.05em;
+			font-weight: 300;
+			line-height: 1.5;
+            margin: 8px 0 0 2px;
+        }
+        &__wrapimg{
+            width: 99%;
+        }
 	}
 
 	.l-menu {
