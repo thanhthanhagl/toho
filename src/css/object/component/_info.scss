@@ -9,7 +9,7 @@
         width: calc((100% - 2px) / 2);
         padding: 7.4% 0 8.8%;
         position: relative;
-        transition: 0.5s all ease;
+        transition: 0.3s all ease;
         display: block;
 
         &:hover {
@@ -40,6 +40,7 @@
             left: 0;
             mix-blend-mode: normal;
             z-index: -1;
+            transition: 0.3s all ease;
         }
 
         &.--left {
@@ -48,6 +49,7 @@
             background-repeat: no-repeat;
             background-position: center;
             z-index: 1;
+            transition: 0.3s all ease;
         }
 
         &.--right {
@@ -56,6 +58,7 @@
             background-repeat: no-repeat;
             background-position: center;
             z-index: 1;
+            transition: 0.3s all ease;
         }
     }
 

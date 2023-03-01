@@ -30,6 +30,7 @@
         margin-bottom: 8.5px;
         &__text{
             &:first-child{
+                width: 80%;
                 &::before {
                     content: "";
                     display: inline-block;
@@ -41,6 +42,10 @@
                     left: -8px;
                     top:-2px;
                 }
+            }
+            &:last-child{
+                width: 20%;
+                text-align: right;
             }
         }        
 

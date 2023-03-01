@@ -18,9 +18,8 @@
 	<meta name="format-detection" content="telephone=no,email=no,address=no">
 	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.svg'); %>">
 	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
-	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
 	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
 </head>
 
 <body class="<%= getBodyClass(); %>">
@@ -34,20 +33,22 @@
 						</h1>
 					</div>
 					<div class="l-header__right">
-						<div class="l-header__right__search u-onlySp">
+						<a href="<%= getRelativePath('/'); %>" class="l-header__right__search u-onlySp">
 							<img src="<%= getRelativePath('/images/common/search.svg'); %>" alt="採用情報">
 							<p class="l-header__right__search__text">採用情報</p>
-						</div>
+						</a>
 						<div class="l-header__right__wrapimg">
 							<a href="tel:0761243888" class="is-call">
 								<picture>
-									<source media="(max-width:739px)" srcset="<%= getRelativePath('/images/common/tel_sp.png'); %>">
+									<source media="(max-width:739px)"
+										srcset="<%= getRelativePath('/images/common/tel_sp.png'); %>">
 									<img src="<%= getRelativePath('/images/common/tel.png'); %>" alt="0761243888">
 								</picture>
 							</a>
 						</div>
 						<div class="l-header__right__text u-onlyPc">10:00〜17:00<br>※土日祝休み</div>
-						<a href="#" class="l-header__right__btn c-button__form u-onlyPc"><span class="c-button__btntext">お問い合わせ</span></a>
+						<a href="#" class="l-header__right__btn c-button__form u-onlyPc"><span
+								class="c-button__btntext">お問い合わせ</span></a>
 					</div>
 				</div>
 				<nav class="l-header__nav">
@@ -95,10 +96,11 @@
 									<div class="l-header__text">電話受付時間　10:00〜17:00 ※土日祝を除く</div>
 								</div>
 								<div class="l-header__info__bottom">
-									<div class="c-button__form">
-										<a href="#" class="c-button__btntext"><span>お問い合わせ</span></a>
-									</div>
+									<a href="<%= getRelativePath('/'); %>" class="c-button__form">
+										<span class="c-button__btntext">お問い合わせ</span>
+									</a>
 								</div>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -115,7 +117,7 @@
 			<main id="l-primary">
 				<% if (getPageId()=='index' ) { %>
 					<div class="c-mainvisual">
-						<div class="c-mainvisual__list">							
+						<div class="c-mainvisual__list">
 							<div class="c-mainvisual__item">
 							</div>
 						</div>
@@ -128,5 +130,5 @@
 							</h2>
 						</div>
 						<% } %>
-								<article>
-									<h2 class="is-none">Toho Yoko</h2>
+							<article>
+								<h2 class="is-none">Toho Yoko</h2>

@@ -35,7 +35,7 @@ a {
 	word-wrap: break-word;
 	text-decoration: none;
 	cursor: pointer;	
-	transition: 0.3s all;
+	transition: 0.3s all ease;
 	&:hover{
 		opacity: 0.7;
 	}

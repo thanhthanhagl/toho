@@ -241,7 +241,7 @@
 				align-items: center;
 				justify-content: center;
 				flex-direction: column;
-				padding: 9px 8px 7px;
+				padding: 5% 1% 4%;
 				img{
 					width: 22px;
 				}
@@ -270,7 +270,7 @@
 		&__nav {
 			position: fixed;
 			top: 55px;
-			left: 0;
+			left: -100%;
 			width: 100%;
 			height: calc(100vh - 55px);
 			padding-top: 1px;

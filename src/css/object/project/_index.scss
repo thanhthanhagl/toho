@@ -31,6 +31,11 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 7.1% 0 7.2%;
+        .c-button{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
     }
     &__info{
         padding: 7.85% 0 7.9%;
@@ -85,7 +90,9 @@
             background-image: url('./images/index/bg_recruit_sp.jpg');
             padding: 60px 0 55px;
             .c-button{
-                padding: 0 15px;
+                max-width: 265px;
+                display: block;
+                margin: 0 auto;
                 &__recruit{
                     padding: 15px 10px 16px;
                     &::after{

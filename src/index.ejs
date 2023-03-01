@@ -16,7 +16,7 @@
 			<div class="c-servise">
 				<div class="c-servise__list">
 					<div class="c-servise__row --first">
-						<div class="c-servise__textbox">
+						<div class="c-servise__textbox fadeInUpTrigger">
 							<div class="c-servise__textbox__inner">
 								<h3 class="c-servise__title">重量物の運搬・設置</h3>
 								<p class="c-servise__desc">
@@ -24,7 +24,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="c-servise__wrapimg --large"></div>
+						<div class="c-servise__wrapimg --large fadeInUpTrigger"></div>
 					</div>
 					<div class="c-servise__row --second">
 						<div class="c-servise__col --left">
@@ -49,8 +49,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="c-button --center"><a href="<%= getRelativePath('/'); %>" class="c-button__more">事業内容を見る</a>
-			</div>
+			<a href="<%= getRelativePath('/'); %>" class="c-button --center"><span class="c-button__more">事業内容を見る</span>
+			</a>
 		</section>
 		<section class="p-index__vehicle">
 			<div class="l-inner">
@@ -114,8 +114,8 @@
 				</div>
 				<div class="c-desc --center">東邦重量では機械の運搬・設置だけでなく、工場内の配置換えなども対応しています。<br>東邦重量のこれまでの実績をご紹介します。</div>
 				<div class="c-works">
-					<div class="c-works --col3" data-aos="fade-up">
-						<a href="<%= getRelativePath('/');%>" class="c-works__item" >
+					<div class="c-works --col3">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item fadeInUpTrigger">
 							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>"
 									alt="作業内容が入ります１８文字程度">
@@ -128,7 +128,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="<%= getRelativePath('/');%>" class="c-works__item">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item fadeInUpTrigger">
 							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>" alt="冷凍機の搬入・据付">
 							</div>
@@ -140,7 +140,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="<%= getRelativePath('/');%>" class="c-works__item">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item fadeInUpTrigger">
 							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>" alt="クレーン作業">
 							</div>
@@ -153,10 +153,11 @@
 							</div>
 						</a>
 					</div>
-					<div class="c-button --center"><a href="<%= getRelativePath('/'); %>"
-							class="c-button__more">事例紹介を見る</a>
-					</div>
+					<a href="<%= getRelativePath('/'); %>" class="c-button --center"><span
+							class="c-button__more">事例紹介を見る</span>
+					</a>
 				</div>
+			</div>
 		</section>
 		<section class="p-index__recruit">
 			<div class="l-inner">
@@ -170,9 +171,9 @@
 					</h2>
 					<div class="c-recruit__desc">小さくとも成長を重ねて、<br class="u-onlyPc">協力し合える関係を築いていける方にお会いできることを楽しみにしています。
 					</div>
-					<div class="c-button --center">
-						<a href="<%= getRelativePath('/');%>" class="c-button__recruit">採用情報を見る</a>
-					</div>
+					<a href="<%= getRelativePath('/');%>" class="c-button --center">
+						<span class="c-button__recruit">採用情報を見る</span>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -225,7 +226,8 @@
 								<h2 class="c-heading__title">お問い合わせ</h2>
 								<div class="c-heading__subtitle">
 									<picture>
-										<source media="(max-width:739px)" srcset="<%= getRelativePath('/images/index/contact_sp.png');%>">
+										<source media="(max-width:739px)"
+											srcset="<%= getRelativePath('/images/index/contact_sp.png');%>">
 										<img src="<%= getRelativePath('/images/index/contact.png');%>" alt="contact">
 									</picture>
 								</div>
@@ -243,9 +245,9 @@
 									<div class="c-contact__text">電話受付時間　10:00〜17:00 ※土日祝を除く</div>
 								</div>
 								<div class="c-contact__info__right">
-									<div class="c-button__form --contact">
-										<a href="#" class="c-button__btntext --fs16"><span>お問い合わせ</span></a>
-									</div>
+									<a href="#" class="c-button__form --contact">
+										<span class="c-button__btntext --fs16">お問い合わせ</span>
+									</a>
 								</div>
 							</div>
 						</div>

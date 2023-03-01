@@ -30,8 +30,8 @@
 						</div>
 						<p class="l-footer__text">〒923-0036 石川県小松市平面町ヘ−118</p>
 					</div>
-					<div class="c-button__form --footer u-onlyPc"><a href="<%= getRelativePath('/'); %>"
-							class="c-button__btntext">お問い合わせ</a></div>
+					<a href="<%= getRelativePath('/'); %>" class="c-button__form --footer u-onlyPc"><span
+							class="c-button__btntext">お問い合わせ</span></a>
 				</div>
 				<div class="l-footer__top --right">
 					<ul class="l-footer__list">
@@ -69,11 +69,7 @@
 <!-- /.l-all -->
 <script src="<%= getRelativePath('/js/jquery-3.6.0.min.js'); %>"></script>
 <script src="<%= getRelativePath('/js/script.js'); %>"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<% if(getPageId()=='index' ) { %>
-	<script src="<%= getRelativePath('/js/slick.min.js'); %>"></script>
-	<script src="<%= getRelativePath('/js/index.js'); %>"></script>
-	<% } %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
 		</body>
 
 		</html>
