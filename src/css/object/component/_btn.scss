@@ -98,6 +98,11 @@
             position: absolute;
             transition: 0.3s all ease;
         }
+        &:hover{
+            &::after{
+                right: calc(9% - 10px);
+            }
+        }
 
     }
 
@@ -112,7 +117,7 @@
         transition: all 0.3s;
 
         &.--contact {
-            padding: 22px 20px 20px;
+            padding: 22px 20px 19px;
 
             &::after {
                 width: 8px;
@@ -133,7 +138,7 @@
 
         &.--footer {
             width: 82.8%;
-            padding: 18px 20px 15px;
+            padding: 17px 20px 16px;
 
             .c-button {
                 &__btntext {

@@ -1,11 +1,30 @@
+
 @font-face {
-	font-family: FolkPro;
-	src: url('./fonts/A-OTF-Folk-Pro-R.otf');
-};
+    font-family: 'A-OTF Folk Pro';
+    src: url('FolkPro-Regular-AlphaNum.woff2') format('woff2'),
+        url('FolkPro-Regular-AlphaNum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
-	font-family: HiraKakuProN;
-	src: url('./fonts/HiraKakuProN-W3.otf');
-};
+    font-family: 'Hiragino Kaku Gothic ProN W3';
+    src: url('HiraKakuProN-W3-AlphaNum.woff2') format('woff2'),
+        url('HiraKakuProN-W3-AlphaNum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hiragino Kaku Gothic ProN W6';
+    src: url('HiraKakuProN-W6-AlphaNum.woff2') format('woff2'),
+        url('HiraKakuProN-W6-AlphaNum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -15,7 +34,7 @@
 body {
 	color: $font-color;
 	font-family: $font-family-hirapron;
-	font-weight: 500;
+	font-weight: 300;
 	line-height: 1.8;
 	word-break: normal;
 	overflow-wrap: normal;

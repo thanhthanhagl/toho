@@ -121,13 +121,27 @@ input, select {
 
 /* base */
 @font-face {
-  font-family: FolkPro;
-  src: url("./fonts/A-OTF-Folk-Pro-R.otf");
+  font-family: 'A-OTF Folk Pro';
+  src: url("FolkPro-Regular-AlphaNum.woff2") format("woff2"), url("FolkPro-Regular-AlphaNum.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: HiraKakuProN;
-  src: url("./fonts/HiraKakuProN-W3.otf");
+  font-family: 'Hiragino Kaku Gothic ProN W3';
+  src: url("HiraKakuProN-W3-AlphaNum.woff2") format("woff2"), url("HiraKakuProN-W3-AlphaNum.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hiragino Kaku Gothic ProN W6';
+  src: url("HiraKakuProN-W6-AlphaNum.woff2") format("woff2"), url("HiraKakuProN-W6-AlphaNum.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 *,
@@ -139,8 +153,8 @@ input, select {
 
 body {
   color: #000;
-  font-family: "HiraKakuProN", sans-serif;
-  font-weight: 500;
+  font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 300;
   line-height: 1.8;
   word-break: normal;
   overflow-wrap: normal;
@@ -342,6 +356,7 @@ input[type="checkbox"] {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  min-height: 166px;
 }
 
 .l-header__content.is-open {
@@ -596,8 +611,12 @@ input[type="checkbox"] {
     top: 0;
     left: 0;
   }
+  .l-header__content {
+    min-height: 55px;
+  }
   .l-header__top {
     padding: 0 0 0 20px;
+    z-index: 11;
   }
   .l-header__logo {
     padding-top: 13px;
@@ -605,6 +624,7 @@ input[type="checkbox"] {
   }
   .l-header__right {
     width: 50%;
+    min-height: 55px;
   }
   .l-header__right__wrapimg {
     background-color: rgba(255, 255, 255, 0.9);
@@ -622,6 +642,7 @@ input[type="checkbox"] {
     align-items: center;
     padding-top: 0;
     width: 32.5%;
+    max-width: 58px;
   }
   .l-header__right__wrapimg img {
     width: 19px;
@@ -630,6 +651,8 @@ input[type="checkbox"] {
   }
   .l-header__right__search {
     width: 33%;
+    max-width: 58px;
+    min-height: 55px;
     position: relative;
     z-index: 1;
     display: -webkit-box;
@@ -656,7 +679,7 @@ input[type="checkbox"] {
   }
   .l-header__right__search__text {
     color: #fff;
-    font-family: "FolkPro", sans-serif;
+    font-family: "A-OTF Folk Pro", sans-serif;
     font-size: 0.5625rem;
     letter-spacing: 0.15em;
     line-height: 1.9;
@@ -696,7 +719,7 @@ input[type="checkbox"] {
   .l-header__list {
     display: block;
     height: auto;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
   }
   .l-header__item {
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
@@ -717,11 +740,14 @@ input[type="checkbox"] {
   }
   .l-header__info {
     padding-bottom: 90px;
+    max-width: 325px;
+    margin: 0 auto;
   }
   .l-header__info__top {
     border: 2px solid #005DAC;
     padding: 7% 11% 5.7%;
     margin-bottom: 15px;
+    background-color: #fff;
   }
   .l-header__text {
     font-size: 0.6875rem;
@@ -729,6 +755,7 @@ input[type="checkbox"] {
     font-weight: 300;
     line-height: 1.5;
     margin: 8px 0 0 2px;
+    color: #333;
   }
   .l-header__wrapimg {
     width: 99%;
@@ -736,7 +763,7 @@ input[type="checkbox"] {
   .l-menu {
     display: block;
     position: fixed;
-    top: 50%;
+    bottom: 0;
     left: 0;
     background-color: #005DAC;
     padding: 16px 11px 12px;
@@ -810,7 +837,7 @@ input[type="checkbox"] {
 }
 
 .l-footer__info {
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .l-footer__text {
@@ -841,7 +868,11 @@ input[type="checkbox"] {
   margin-bottom: 41px;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
+  font-weight: 600;
   line-height: 1;
+}
+
+.l-footer__link a {
   color: #333;
 }
 
@@ -886,6 +917,10 @@ input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 739px) {
+  .l-footer {
+    background-image: url("./images/common/bg_footer_sp.jpg");
+    background-size: 100%;
+  }
   .l-footer__contents {
     padding: 40px 0 12px;
   }
@@ -904,14 +939,14 @@ input[type="checkbox"] {
     width: 100%;
   }
   .l-footer__bottom {
-    padding: 87px 0 0;
+    padding: 88px 0 0;
   }
   .l-footer__wraplogo {
     max-width: 26.5%;
-    margin: 0 auto 18px;
+    margin: 0 auto 17px;
   }
   .l-footer__info {
-    margin-bottom: 23px;
+    margin-bottom: 22px;
   }
   .l-footer__text {
     text-align: center;
@@ -1091,6 +1126,10 @@ input[type="checkbox"] {
   transition: 0.3s all ease;
 }
 
+.c-button__recruit:hover::after {
+  right: calc(9% - 10px);
+}
+
 .c-button__form {
   cursor: pointer;
   display: block;
@@ -1104,7 +1143,7 @@ input[type="checkbox"] {
 }
 
 .c-button__form.--contact {
-  padding: 22px 20px 20px;
+  padding: 22px 20px 19px;
 }
 
 .c-button__form.--contact::after {
@@ -1121,7 +1160,7 @@ input[type="checkbox"] {
 
 .c-button__form.--footer {
   width: 82.8%;
-  padding: 18px 20px 15px;
+  padding: 17px 20px 16px;
 }
 
 .c-button__form.--footer .c-button__btntext::before {
@@ -1262,13 +1301,13 @@ input[type="checkbox"] {
 }
 
 .c-contact__col.--left {
-  width: 29%;
+  width: 29.2%;
   border-right: 1px solid rgba(74, 74, 74, 0.2);
 }
 
 .c-contact__col.--right {
   width: 75%;
-  padding: 0.3% 0 0 6.5%;
+  padding: 0.5% 0 0 6.5%;
 }
 
 .c-contact__info {
@@ -1283,14 +1322,14 @@ input[type="checkbox"] {
 }
 
 .c-contact__info__left {
-  width: 55%;
-  padding: 1.5% 0;
+  width: 54.7%;
+  padding: 1.3% 0;
 }
 
 .c-contact__info__right {
   width: 43.4%;
   max-width: 260px;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .c-contact__wrapimg {
@@ -1348,7 +1387,9 @@ input[type="checkbox"] {
     width: 100%;
     border: 2px solid #005DAC;
     margin-bottom: 14px;
-    padding: 7% 11% 5%;
+    padding: 7% 11% 5.1%;
+    background-color: #fff;
+    color: #333;
   }
   .c-contact__info__right {
     width: 100%;
@@ -1360,7 +1401,7 @@ input[type="checkbox"] {
     margin: 8px 0 0 2px;
   }
   .c-contact__wrapimg {
-    width: 99%;
+    width: 98.5%;
   }
 }
 
@@ -1391,14 +1432,20 @@ input[type="checkbox"] {
 
 .c-info__col:hover::before {
   background-color: rgba(17, 17, 17, 0.3);
+  -webkit-transition: 0.7s all ease;
+  transition: 0.7s all ease;
 }
 
 .c-info__col:hover.--left {
   background-size: 120%;
+  -webkit-transition: 0.7s all ease;
+  transition: 0.7s all ease;
 }
 
 .c-info__col:hover.--right {
   background-size: 120%;
+  -webkit-transition: 0.7s all ease;
+  transition: 0.7s all ease;
 }
 
 .c-info__col::before {
@@ -1413,28 +1460,22 @@ input[type="checkbox"] {
   left: 0;
   mix-blend-mode: normal;
   z-index: -1;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
 }
 
 .c-info__col.--left {
   background-image: url("./images/index/img_company.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
 }
 
 .c-info__col.--right {
   background-image: url("./images/index/img_faq.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
 }
 
 .c-info__inner {
@@ -1454,7 +1495,7 @@ input[type="checkbox"] {
   .c-info__col {
     width: 100%;
     margin-bottom: 2px;
-    padding: 24px 25px 39px;
+    padding: 25px 25px 38px;
   }
   .c-info__col::before {
     background-color: rgba(17, 17, 17, 0.5);
@@ -1476,8 +1517,11 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 739px) {
   .c-mainvisual__item {
-    height: 100vh;
+    height: auto;
+    padding-bottom: 80%;
     background-image: url("./images/index/bg_mv_sp.jpg");
+    position: relative;
+    top: 55px;
   }
 }
 
@@ -1497,8 +1541,8 @@ input[type="checkbox"] {
   margin: 0 auto;
 }
 
-.c-pagetop:hover {
-  opacity: 0.7;
+.c-pagetop:hover::before {
+  width: 0;
 }
 
 .c-pagetop::before {
@@ -1517,7 +1561,7 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 739px) {
   .c-pagetop {
-    padding: 8px 0 10px;
+    padding: 8px 0 11px;
   }
   .c-pagetop__wrapimg {
     width: 20%;
@@ -1528,10 +1572,11 @@ input[type="checkbox"] {
 .c-recruit {
   text-align: center;
   color: #fff;
+  z-index: 2;
 }
 
 .c-recruit__title {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .c-recruit__desc {
@@ -1554,7 +1599,7 @@ input[type="checkbox"] {
     text-align: left;
     font-size: 0.8125rem;
     line-height: 1.7;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1575,10 +1620,10 @@ input[type="checkbox"] {
 }
 
 .c-servise__row.--first .c-servise__textbox {
-  padding: 4.9% 3.5% 3.8% 16.8%;
+  padding: 5% 3.5% 3.8% 16.8%;
   width: 48.9%;
   position: absolute;
-  top: 11.4%;
+  top: 11.1%;
   left: 0;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1777,6 +1822,11 @@ input[type="checkbox"] {
     margin-top: 1px;
     line-height: 1.7;
   }
+  .c-servise__desc.--edit {
+    display: inline-block;
+    margin-top: -1px !important;
+    padding-right: 3px;
+  }
   .c-servise__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1835,7 +1885,7 @@ input[type="checkbox"] {
     -ms-flex-direction: row;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 13.5%;
+    margin-bottom: 13.4%;
   }
   .c-servise__row.--second .c-servise__col.--left {
     -webkit-box-align: start;
@@ -1874,7 +1924,7 @@ input[type="checkbox"] {
   .c-servise__row.--second .c-servise__textbox {
     z-index: 2;
     width: 53.3%;
-    padding: 6% 6.6% 5.7%;
+    padding: 6.1% 6.6% 5.7%;
   }
   .c-servise__row.--second .c-servise__textbox__inner::before {
     width: 72px;
@@ -1973,7 +2023,7 @@ input[type="checkbox"] {
 }
 
 .c-heading.--contact {
-  padding: 15.8% 0;
+  padding: 15.7% 0;
 }
 
 .c-heading.--contact .c-heading__title {
@@ -2004,6 +2054,8 @@ input[type="checkbox"] {
   line-height: 1.6;
   position: relative;
   margin-top: -12px;
+  font-family: "Hiragino Kaku Gothic Pro", sans-serif;
+  font-weight: 600;
 }
 
 .c-headingred__title::before {
@@ -2175,7 +2227,7 @@ input[type="checkbox"] {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-top: 26px;
+    margin-top: 27px;
   }
   .c-vehicle__col.--img {
     width: 100%;
@@ -2207,8 +2259,8 @@ input[type="checkbox"] {
 
 /*section works*/
 .c-works {
-  margin-top: 3.32em;
-  margin-bottom: 3.7em;
+  margin-top: 3.33em;
+  margin-bottom: 3.75em;
 }
 
 .c-works__content {
@@ -2308,9 +2360,10 @@ input[type="checkbox"] {
 }
 
 .changetime {
-  -webkit-animation-duration: 4.5s;
-  animation-duration: 4.5s;
-  /*この数字を変化させたい時間に変更*/
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
 @media only screen and (max-width: 959px) {
@@ -2327,7 +2380,7 @@ input[type="checkbox"] {
 
 @media only screen and (max-width: 739px) {
   .c-works {
-    margin-top: 25px;
+    margin-top: 24px;
     margin-bottom: 0;
   }
   .c-works.--col3 {
@@ -2358,12 +2411,12 @@ input[type="checkbox"] {
   }
   .c-works__content {
     width: 50%;
-    padding: 15px 15px 9px;
+    padding: 16px 15px 9px;
   }
   .c-works__title {
     line-height: 1.3;
     height: auto;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
   .c-works__label {
     padding: 2px 10px 1px;
@@ -2378,9 +2431,21 @@ input[type="checkbox"] {
 
 .p-index__servise {
   padding: 5.7% 0 7.8%;
-  background: -webkit-gradient(linear, left top, right top, color-stop(77.5%, #f3f3f3), color-stop(22.5%, #fff));
-  background: -webkit-linear-gradient(left, #f3f3f3 77.5%, #fff 22.5%);
-  background: linear-gradient(to right, #f3f3f3 77.5%, #fff 22.5%);
+  background-image: url("./images/common/bg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.p-index__servise::before {
+  content: "";
+  width: 77.5%;
+  height: 100%;
+  background-color: #f3f3f3;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .p-index__servise .c-heading.--multi {
@@ -2389,6 +2454,9 @@ input[type="checkbox"] {
 
 .p-index__vehicle {
   padding: 5.5% 0 7.9%;
+  background-image: url("./images/common/bg.jpg");
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 .p-index__works {
@@ -2397,11 +2465,7 @@ input[type="checkbox"] {
 }
 
 .p-index__works .c-desc {
-  margin-top: 50px;
-}
-
-.p-index__works .l-imgTxt {
-  margin-bottom: 60px;
+  margin-top: 49px;
 }
 
 .p-index__recruit {
@@ -2410,10 +2474,36 @@ input[type="checkbox"] {
   background-repeat: no-repeat;
   background-position: center;
   padding: 7.1% 0 7.2%;
+  position: relative;
+  z-index: 2;
 }
 
-.p-index__recruit .c-button:hover {
-  opacity: 0.7;
+.p-index__recruit::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./images/index/line.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.p-index__recruit::after {
+  content: "";
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  mix-blend-mode: normal;
+  z-index: -1;
 }
 
 .p-index__info {
@@ -2428,13 +2518,13 @@ input[type="checkbox"] {
 @media only screen and (max-width: 739px) {
   .p-index .c-mainvisual {
     margin-top: 0;
-    margin-bottom: 55px;
+    margin-bottom: 110px;
   }
   .p-index__servise {
     padding: 19px 0 55px;
-    background: -webkit-gradient(linear, left top, right top, color-stop(80%, #f3f3f3), color-stop(20%, #fff));
-    background: -webkit-linear-gradient(left, #f3f3f3 80%, #fff 20%);
-    background: linear-gradient(to right, #f3f3f3 80%, #fff 20%);
+  }
+  .p-index__servise::before {
+    width: 80%;
   }
   .p-index__servise .c-heading.--multi {
     margin-bottom: 2.375rem;
@@ -2449,9 +2539,9 @@ input[type="checkbox"] {
     width: 13.5%;
   }
   .p-index__works .c-desc {
-    margin-top: 31px;
+    margin-top: 33px;
     text-align: left;
-    line-height: 1.7;
+    line-height: 1.69;
   }
   .p-index__works .c-button__more {
     padding: 17px 20px 18px;
@@ -2459,6 +2549,16 @@ input[type="checkbox"] {
   .p-index__recruit {
     background-image: url("./images/index/bg_recruit_sp.jpg");
     padding: 60px 0 55px;
+  }
+  .p-index__recruit::before {
+    background-image: url("./images/index/line_sp.png");
+    background-size: contain;
+  }
+  .p-index__recruit::after {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    top: 5px;
+    left: 5px;
   }
   .p-index__recruit .c-button {
     max-width: 265px;

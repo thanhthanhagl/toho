@@ -1,7 +1,7 @@
 /*section works*/
 .c-works {
-    margin-top: 3.32em;
-    margin-bottom: 3.7em;
+    margin-top: 3.33em;
+    margin-bottom: 3.75em;
 
     &__content {
         padding: 21px 24px 17px;
@@ -75,8 +75,8 @@
 }
 
 .changetime {
-    animation-duration: 4.5s;
-    /*この数字を変化させたい時間に変更*/
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
 }
 
 //Tablet + Phone
@@ -99,7 +99,7 @@
 //Phone
 @include media-breakpoint-sp {
     .c-works {
-        margin-top: 25px;
+        margin-top: 24px;
         margin-bottom: 0;
 
         &.--col3 {
@@ -129,13 +129,13 @@
 
         &__content {
             width: 50%;
-            padding: 15px 15px 9px;
+            padding: 16px 15px 9px;
         }
 
         &__title {
             line-height: 1.3;
             height: auto;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
         }
 
         &__label {

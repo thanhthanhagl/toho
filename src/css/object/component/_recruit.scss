@@ -2,8 +2,9 @@
 .c-recruit{
     text-align: center;
     color: #fff;
+    z-index: 2;
     &__title{
-        margin-bottom: 30px;
+        margin-bottom: 29px;
     }
     &__desc{
         font-size: rem(16);
@@ -25,7 +26,7 @@
             text-align: left;
             font-size: rem(13);
             line-height: 1.7;
-            margin-bottom: 26px;
+            margin-bottom: 25px;
         }
     }
 }

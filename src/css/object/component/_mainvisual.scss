@@ -13,8 +13,11 @@
 @include media-breakpoint-sp{
     .c-mainvisual{
         &__item{
-            height: 100vh;
+            height: auto;
+            padding-bottom: 80%;
             background-image: url('./images/index/bg_mv_sp.jpg');
+            position: relative;
+            top:55px;
         }
     }
 }

@@ -5,25 +5,25 @@
     }
     &__col{
         &.--left{
-            width: 29%;
+            width: 29.2%;
             border-right: 1px solid rgba(74,74,74,0.2);   
         }
         &.--right{
             width: 75%;
-            padding: 0.3% 0 0 6.5%;
+            padding: 0.5% 0 0 6.5%;
         }
     }
     &__info{
         display: flex;
         justify-content: space-between;
         &__left{
-            width: 55%;
-            padding: 1.5% 0;
+            width: 54.7%;
+            padding: 1.3% 0;
         }
         &__right{
             width: 43.4%;
             max-width: 260px;
-            margin-top: 3px;
+            margin-top: 2px;
         }     
     }
     
@@ -78,7 +78,9 @@
                 width: 100%;
                 border: 2px solid $brand-color;
                 margin-bottom: 14px;
-                padding: 7% 11% 5%;
+                padding: 7% 11% 5.1%;
+                background-color: #fff;
+                color: #333;
             }
             &__right{
                 width: 100%;
@@ -91,7 +93,7 @@
             margin: 8px 0 0 2px;
         }
         &__wrapimg{
-            width: 99%;
+            width: 98.5%;
         }
     }
 }

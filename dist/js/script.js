@@ -16,29 +16,44 @@ jQuery(function ($) {
 	// header-menu
 	//------------------------------------
 	//ハンバーガーボタンクリック
+	//---------disable scroll------------
+	function disableScroll() {
+		var ycoord = $(window).scrollTop();
+		$(".l-header").data("ycoord", ycoord);
+		ycoord = ycoord * -1;
+		$("body")
+			.css("position", "fixed")
+			.css("left", "0px")
+			.css("right", "0px")
+			.css("top", ycoord + "px");
+		$(".l-header")
+			.css("position", "fixed")
+			.css("left", "0px")
+			.css("right", "0px")
+			.css("top", "0px");
+	}
+	function enableScroll() {
+		$("body")
+			.css("position", "")
+			.css("left", "auto")
+			.css("right", "auto")
+			.css("top", "auto");
+		$(window).scrollTop($(".l-header").data("ycoord"));
+	}
+
 	$menuButton.click(function () {
 		if ($(this).hasClass('is-open')) {
 			$(this).removeClass('is-open');
-			$('.l-header__item.is-hover').removeClass('is-open');
 			$headerNav.css('left', '-100%');
 			$('body').removeClass('is-fixed');
+			enableScroll();
 		} else {
 			$(this).addClass('is-open');
 			$headerNav.css('left', '0');
 			$('body').addClass('is-fixed');
+			disableScroll();
 		}
-	});
-
-	//SPメニュー内アコーディオン
-	$(".l-header__item.is-hover").click(function (e) {
-		if (!desktopMode) {
-			if ($(this).hasClass('is-open')) {
-				$(this).removeClass('is-open');
-			} else {
-				$(this).addClass('is-open');
-			}
-		}
-	});
+	});	
 	//
 	// pagetop
 	//------------------------------------
@@ -78,9 +93,7 @@ jQuery(function ($) {
 	//fade in up
 	$('.fadeInUpTrigger').on('inview', function (event, isInView) {
 		if (isInView) {//表示領域に入った時
-			$(this).addClass('animate__animated animate__fadeInUp changetime');//クラス名が付与
-		} else {//表示領域から出た時
-			$(this).removeClass('animate__animated animate__fadeInUp changetime');//クラス名が除去
+			$(this).stop().addClass('animate__animated animate__fadeInUp changetime');//クラス名が付与
 		}
 	});
 });

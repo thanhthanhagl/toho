@@ -9,10 +9,10 @@
 
             .c-servise {
                 &__textbox {
-                    padding: 4.9% 3.5% 3.8% 16.8%;
+                    padding: 5% 3.5% 3.8% 16.8%;
                     width: 48.9%;
                     position: absolute;
-                    top: 11.4%;
+                    top: 11.1%;
                     left: 0;
                     transform: translateY(-50%);
 
@@ -223,6 +223,11 @@
             letter-spacing: 0.05em;
             margin-top: 1px;
             line-height: 1.7;
+            &.--edit{
+                display: inline-block;
+                margin-top: -1px !important;
+                padding-right: 3px;
+            }
         }
 
         &__row {
@@ -281,7 +286,7 @@
                     &__col {
                         flex-direction: row;
                         width: 100%;
-                        margin-bottom: 13.5%;
+                        margin-bottom: 13.4%;
 
                         &.--left {
                             align-items: flex-start;
@@ -319,7 +324,7 @@
                     &__textbox {
                         z-index: 2;
                         width: 53.3%;
-                        padding: 6% 6.6% 5.7%;
+                        padding: 6.1% 6.6% 5.7%;
                         &__inner {
                             &::before {
                                 width: 72px;

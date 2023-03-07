@@ -17,14 +17,17 @@
 
             &::before {
                 background-color: rgba(17, 17, 17, 0.3);
+                transition: 0.7s all ease;
             }
 
             &.--left {
                 background-size: 120%;
+                transition: 0.7s all ease;
             }
 
             &.--right {
                 background-size: 120%;
+                transition: 0.7s all ease;
             }
         }
 
@@ -40,25 +43,22 @@
             left: 0;
             mix-blend-mode: normal;
             z-index: -1;
-            transition: 0.3s all ease;
         }
 
         &.--left {
             background-image: url('./images/index/img_company.jpg');
-            background-size: cover;
+            background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
             z-index: 1;
-            transition: 0.3s all ease;
         }
 
         &.--right {
             background-image: url('./images/index/img_faq.jpg');
-            background-size: cover;
+            background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
             z-index: 1;
-            transition: 0.3s all ease;
         }
     }
 
@@ -79,7 +79,7 @@
         &__col {
             width: 100%;
             margin-bottom: 2px;
-            padding: 24px 25px 39px;
+            padding: 25px 25px 38px;
             &::before{
                 background-color: rgba(17, 17, 17, 0.5);
             }

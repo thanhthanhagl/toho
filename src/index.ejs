@@ -28,23 +28,23 @@
 					</div>
 					<div class="c-servise__row --second">
 						<div class="c-servise__col --left">
-							<div class="c-servise__textbox">
+							<div class="c-servise__textbox fadeInUpTrigger">
 								<div class="c-servise__textbox__inner">
 									<h3 class="c-servise__title">省力化機器・治工具の製作</h3>
 									<p class="c-servise__desc">ロボットシステムなどの設計・製作・メンテナンスから、それに伴う治具の設計・製作を行ないます。</p>
 								</div>
 							</div>
-							<div class="c-servise__wrapimg --small"></div>
+							<div class="c-servise__wrapimg --small fadeInUpTrigger"></div>
 						</div>
 						<div class="c-servise__col --right">
-							<div class="c-servise__textbox">
+							<div class="c-servise__textbox fadeInUpTrigger">
 								<div class="c-servise__textbox__inner">
 									<h3 class="c-servise__title">溶接部品販売店業</h3>
 									<p class="c-servise__desc">溶接部品の販売を行なっています。<br
-											class="u-onlySp">自社で在庫管理を行うため、消耗部品の納入も迅速に対応することが可能です。</p>
+											class="u-onlySp"><span class="c-servise__desc --edit">自社で在庫管理を行うため、消耗部品の納入も迅速に対応することが可能です。</span></p>
 								</div>
 							</div>
-							<div class="c-servise__wrapimg --small"></div>
+							<div class="c-servise__wrapimg --small fadeInUpTrigger"></div>
 						</div>
 					</div>
 				</div>
@@ -59,8 +59,12 @@
 				</div>
 				<div class="c-vehicle">
 					<div class="c-vehicle__main">
-						<div class="c-vehicle__col --img"><img
-								src="<%= getRelativePath('/images/index/img_fleet.jpg');%>" alt="保有車両"></div>
+						<div class="c-vehicle__col --img">
+							<picture>
+								<source media="(max-width:739px)" srcset="<%= getRelativePath('/images/index/img_fleet_sp.jpg');%>">
+								<img src="<%= getRelativePath('/images/index/img_fleet.jpg');%>" alt="保有車両">
+							</picture>
+						</div>
 						<div class="c-vehicle__col --textbox">
 							<ul class="c-vehicle__list">
 								<li>
@@ -114,8 +118,8 @@
 				</div>
 				<div class="c-desc --center">東邦重量では機械の運搬・設置だけでなく、工場内の配置換えなども対応しています。<br>東邦重量のこれまでの実績をご紹介します。</div>
 				<div class="c-works">
-					<div class="c-works --col3">
-						<a href="<%= getRelativePath('/');%>" class="c-works__item fadeInUpTrigger">
+					<div class="c-works --col3 fadeInUpTrigger">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item">
 							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>"
 									alt="作業内容が入ります１８文字程度">
@@ -128,7 +132,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="<%= getRelativePath('/');%>" class="c-works__item fadeInUpTrigger">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item">
 							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>" alt="冷凍機の搬入・据付">
 							</div>
@@ -140,7 +144,7 @@
 								</p>
 							</div>
 						</a>
-						<a href="<%= getRelativePath('/');%>" class="c-works__item fadeInUpTrigger">
+						<a href="<%= getRelativePath('/');%>" class="c-works__item">
 							<div class="c-works__img">
 								<img src="<%= getRelativePath('/images/index/feature_img.jpg');%>" alt="クレーン作業">
 							</div>

@@ -1,4 +1,4 @@
-/* pagetop */ 
+/* pagetop */
 
 .c-pagetop {
     background-color: $brand-color;
@@ -7,14 +7,19 @@
     text-align: center;
     cursor: pointer;
     transition: 0.3s right;
-    &__wrapimg{
+
+    &__wrapimg {
         width: 9%;
         margin: 0 auto;
     }
-    &:hover{
-        opacity: 0.7;
+
+    &:hover {
+        &::before {
+            width: 0;
+        }
     }
-    &::before{
+
+    &::before {
         content: "";
         display: block;
         width: 50%;
@@ -22,16 +27,18 @@
         position: absolute;
         top: 0;
         right: 0;
-        background-color: rgba(0,0,0,0.1);
+        background-color: rgba(0, 0, 0, 0.1);
         mix-blend-mode: normal;
         transition: 0.3s all ease;
     }
 }
+
 //Phone
-@include media-breakpoint-sp{
-    .c-pagetop{
-        padding: 8px 0 10px;
-        &__wrapimg{
+@include media-breakpoint-sp {
+    .c-pagetop {
+        padding: 8px 0 11px;
+
+        &__wrapimg {
             width: 20%;
         }
     }
